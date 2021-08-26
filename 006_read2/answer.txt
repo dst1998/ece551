@@ -3,7 +3,7 @@ In the loop wtith i = 1, a = 7
 a=27
 [C[C = 27
 x = 2
-inIn anotherFunction()[D2,9)
+inIn anotherFunction()[D2, 9)
 a is 2, b= = 9is 9
 a is 2, b is 9
 a is 2, b is 8
