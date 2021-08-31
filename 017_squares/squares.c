@@ -7,10 +7,10 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
     //count from 0 to h. Call the number you count with y
     for (int x = 0; x < w; x++) {
       //count from 0 to w. Call the number you count with x
-      if (((x_offset < x) && (x < (x_offset + size2)) &&
+      if (((x_offset <= x) && (x < (x_offset + size2)) &&
            (y == y_offset || y == y_offset + size2 - 1)) ||
-          ((y_offset < y) && (y < (y_offset + size2)) &&
-           (x == x_offset || x == x_offset + size2 - 1)))
+          ((y_offset <= y) && (y < (y_offset + size2)) &&
+           (x == x_offset || (x == x_offset + size2 - 1))))
         printf("*");
       //check if  EITHER
       //    ((x is between x_offset  and x_offset +size2) AND
