@@ -31,14 +31,19 @@ int main(void) {
   printf("Ok, time for round 2. I have another secret number.\n");
   printf("Your guess:\n");
   if (fgets(buffer, 1024, stdin) == NULL) {
-    printf("Oh no, you are giving up?  You lose...\n");
-    return EXIT_FAILURE;
-  }
-  yourGuess = atoi(buffer);
-  if (yourGuess == total) {
-    printf("You win round 2 also!\n");
-    return EXIT_SUCCESS;
-  }
-  printf("Sorry, you did not win the second round\n");
-  return EXIT_FAILURE;
-}
+    printf("Oh no, you are giving up?  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
