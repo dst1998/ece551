@@ -1,12 +1,10 @@
-Grading at 09/08/2021:12:47:12.951965
-For commit ID c823b0b6b4b730ff424088f08500f40d679f8843
-Grading at Wed Sep  8 08:47:12 EDT 2021
-I expected to find a file called 'answer.txt' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-answers.txt
-README
-test.c
+Grading at 09/08/2021:12:48:53.122640
+For commit ID 05f461849b0c2763a7009cc0e5e1634516e8f4d3
+Grading at Wed Sep  8 08:48:53 EDT 2021
+Line_4_did_not_match
+Line_5_did_not_match
+Line_6_did_not_match
+Your file did not match the expected ouput
 Your output did not match what we expected.
 
 Overall Grade: F
