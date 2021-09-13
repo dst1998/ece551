@@ -1,2 +1,2 @@
 test: test.c
-	gcc -o test test.c
+	gcc -Wall -Werror -o test test.c
