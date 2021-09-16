@@ -1,0 +1,112 @@
+Grading at 09/16/2021:01:05:15.530500
+For commit ID 9c481ff0db0c66a84c610c6f0b4c27968dd939cb
+Grading at Wed Sep 15 21:05:14 EDT 2021
+**Testing broken implementation 10 **
+-------------------------------------
+
+1213572469
+Corrct! answer is 4
+11111
+Corrct! answer is 1
+10987652469
+Corrct! answer is 4
+1212129
+Corrct! answer is 3
+
+Corrct! answer is 0
+-1-2127283648100000
+Wrong! answer is 2, your answer is 1
+
+**Testing broken implementation 11 **
+-------------------------------------
+
+1213572469
+Wrong! answer is 4, your answer is 5
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+1213572469
+Corrct! answer is 4
+11111
+Wrong! answer is 1, your answer is 5
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+1213572469
+Wrong! answer is 4, your answer is 2
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+1213572469
+Corrct! answer is 4
+11111
+Wrong! answer is 1, your answer is 2
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+1213572469
+Corrct! answer is 4
+11111
+Corrct! answer is 1
+10987652469
+Corrct! answer is 4
+1212129
+Corrct! answer is 3
+
+Wrong! answer is 0, your answer is 1
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+1213572469
+Wrong! answer is 4, your answer is 11
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+1213572469
+Corrct! answer is 4
+11111
+Wrong! answer is 1, your answer is 0
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+1213572469
+Wrong! answer is 4, your answer is -1
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+1213572469
+Wrong! answer is 4, your answer is 1
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+1213572469
+Wrong! answer is 4, your answer is 2
+
+**Testing correct implementation **
+-------------------------------------
+
+1213572469
+Corrct! answer is 4
+11111
+Corrct! answer is 1
+10987652469
+Corrct! answer is 4
+1212129
+Corrct! answer is 3
+
+Corrct! answer is 0
+-1-2127283648100000
+Corrct! answer is 2
+
+All test programs were handled correctly
+
+Overall Grade: PASSED
