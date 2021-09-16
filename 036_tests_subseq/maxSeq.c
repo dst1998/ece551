@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+size_t maxSeq(int * array, size_t n) {
+  size_t cnt = 0, num = 0;
+  for (size_t i = 1; i < n; i++) {
+    if (array[i - 1] < array[i]) {
+      cnt += 1;
+    }
+    else {
+      if (num < cnt) {
+        num = cnt;
+      }
+      cnt = 0;
+    }
+  }
+  return num + 1;
+}
