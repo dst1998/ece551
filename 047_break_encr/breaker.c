@@ -23,6 +23,10 @@ int decrypt(FILE * f) {
     }
   }
   int p = count(myarray, 26);
+  if (p < 4) {
+    p = p - 4 + 26;
+    return p;
+  }
   return p - 4;  //"e"-"a"=4
 }
 
