@@ -1,0 +1,36 @@
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char ** argv) {
+  if (argc != 2) {
+    fprintf(stderr, "Usage: inputFileName\n");
+    return EXIT_FAILURE;
+  }
+  FILE * f = fopen(argv[1], "r");
+  if (f == NULL) {
+    perror("Could not open file");
+    return EXIT_FAILURE;
+  }
+
+  char matrix[10][10];
+  int c;
+  int i, j, a, b;
+  for (i = 0; i < 10; i++) {
+    j = 0;
+    while ((c = fgetc(f)) != EOF) {
+      matrix[j][10 - i] = c;
+      j++;
+    }
+  }
+  for (a = 0; a < 10; a++) {
+    for (b = 0; b < 10; b++) {
+      printf("%c", matrix[a][b]);
+    }
+    printf("\n");
+  }
+  if (fclose(f) != 0) {
+    perror("Failed to close the input file!");
+    return EXIT_FAILURE;
+  }
+  return EXIT_SUCCESS;
+}
