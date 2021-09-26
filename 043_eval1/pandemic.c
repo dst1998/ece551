@@ -1,15 +1,22 @@
 #include "pandemic.h"
 
+#include "stdio.h"
+#include "stdlib.h"
+
 country_t parseLine(char * line) {
   country_t ans;
   char * p = line;
   int i = 0;
   while (*p != ',') {
-    ans.name[i] = *p;
+    ans.name[i] = (*p);
+    // printf("%c", *p);
     i++;
     p++;
   }
+  ans.name[i] = '\0';
+  p++;
   ans.population = atoi(p);
+  //printf("\n");
   // ans.name[0] = '\0';
   //ans.population = 0;
   return ans;
