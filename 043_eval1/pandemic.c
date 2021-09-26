@@ -19,11 +19,21 @@ country_t parseLine(char * line) {
   //printf("\n");
   // ans.name[0] = '\0';
   //ans.population = 0;
+  //if... return EXIT_FAILURE;
   return ans;
 }
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
-  //WRITE ME
+  //char * p = data;
+  unsigned total = 0;
+  for (size_t i = 0; i < n_days - 6; i++) {
+    total = 0;
+    for (size_t j = 0; j < n_days; j++) {
+      total = data[i + j];
+      // printf("%ud", data[i]);
+    }
+    avg[i] = total / n_days;
+  }
 }
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
