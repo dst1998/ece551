@@ -10,8 +10,8 @@ country_t parseLine(char * line) {
   ans.population = 0;
   char * p = line;
   int i = 0;
-  int cnt = 0;
-  while (*p != '\0') {
+  //int cnt = 0;
+  /*while (*p != '\0') {
     while (*p == ',') {
       cnt++;
       p++;
@@ -19,10 +19,10 @@ country_t parseLine(char * line) {
     p++;
   }
   if (cnt != 1) {
-    printf("Wrong number of ','");
+    printf("Wrong number of ','.\n");
     exit(EXIT_FAILURE);
   }
-
+  */
   p = line;
   while (*p != ',') {
     ans.name[i] = (*p);
@@ -36,7 +36,7 @@ country_t parseLine(char * line) {
     p++;
   }
   if (*p < 48 || *p > 57) {
-    printf("Wrong input of population");
+    perror("Wrong input of population.\n");
     exit(EXIT_FAILURE);
   }
   ans.population = atoi(p);
@@ -46,11 +46,11 @@ country_t parseLine(char * line) {
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   if (data == NULL) {
-    printf("Could not open file");
+    printf("Could not open file.\n");
     exit(EXIT_FAILURE);
   }
   if (n_days <= 6) {
-    printf("Wrong number of days");
+    printf("Wrong number of days.\n");
     exit(EXIT_FAILURE);
   }
   double total = 0;
@@ -66,11 +66,11 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
   if (data == NULL) {
-    printf("Could not open file");
+    printf("Could not open file.\n");
     exit(EXIT_FAILURE);
   }
   if (!n_days || !pop) {
-    printf("Wrong number of day or population");
+    printf("Wrong number of day or population.\n");
     exit(EXIT_FAILURE);
   }
   unsigned total = 0;
@@ -86,11 +86,11 @@ void printCountryWithMax(country_t * countries,
                          unsigned ** data,
                          size_t n_days) {
   if (data == NULL) {
-    printf("Could not open file");
+    printf("Could not open file.\n");
     exit(EXIT_FAILURE);
   }
   if (!n_days || !n_countries) {
-    printf("Wrong number of day or country");
+    printf("Wrong number of day or country.\n");
     exit(EXIT_FAILURE);
   }
   unsigned temp = 0;
@@ -108,12 +108,11 @@ void printCountryWithMax(country_t * countries,
       }
     }
   }
-  if (temp == same) {
-    printf("There is a tie between at least two countries");
-    exit(EXIT_FAILURE);
-  }
   unsigned number_cases = temp;
 
   strncpy(country_name, countries[x].name, 64);
   printf("%s has the most daily cases with %u\n", country_name, number_cases);
+  if (temp == same) {
+    printf("There is a tie between at least two countries");
+  }
 }
