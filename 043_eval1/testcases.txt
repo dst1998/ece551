@@ -1,5 +1,6 @@
 #error
-printCountries invalid.csv
+printCountries invalid1.csv
+printCountries invalid2.csv
 printRunningAvg population.csv daily_small.csv
 printCumulative population.csv daily_small.csv
 printDailyMax population.csv
