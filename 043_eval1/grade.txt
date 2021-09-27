@@ -1,6 +1,6 @@
-Grading at 09/27/2021:03:25:44.717207
-For commit ID 90db5d9a23534755492648bbd5a0921dc5a12add
-Grading at Sun Sep 26 23:25:37 EDT 2021
+Grading at 09/27/2021:03:46:38.078266
+For commit ID e54d7de192dd0cea6a93bcdd3ea3d15ab35e9e0d
+Grading at Sun Sep 26 23:46:31 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -8,10 +8,10 @@ rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
 Test case printCountries invalid1.csv
-Wrong input of populationYour program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid2.csv
-Wrong input of populationYour program did not indicate a failure case
+Your program successfully indicated a failure case
 
 Compiling printRunningAvg
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
