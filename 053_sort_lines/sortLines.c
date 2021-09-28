@@ -22,7 +22,7 @@ int main(int argc, char ** argv) {
   size_t i = 0;
   size_t j = 0;
   if (argc == 1) {
-    printf("Please input strings wanted to be sorted.\n");
+    //printf("Please input strings wanted to be sorted.\n");
 
     while (getline(&line, &sz, stdin) >= 0) {
       lines = realloc(lines, (i + 1) * sizeof(*lines));
@@ -33,11 +33,11 @@ int main(int argc, char ** argv) {
     free(line);
     sortData(lines, i);
     for (j = 0; j < i; j++) {
-      printf("Output: %s", lines[j]);
+      printf("%s", lines[j]);
       free(lines[j]);
     }
     free(lines);
-    printf("Success of all processing!");
+    //printf("Success of all processing!");
     return EXIT_SUCCESS;
   }
 
@@ -66,6 +66,6 @@ int main(int argc, char ** argv) {
       return EXIT_FAILURE;
     }
   }
-  printf("Success of all processing!");
+  //printf("Success of all processing!");
   return EXIT_SUCCESS;
 }
