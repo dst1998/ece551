@@ -16,6 +16,56 @@ void sortData(char ** data, size_t count) {
 
 int main(int argc, char ** argv) {
   //WRITE YOUR CODE HERE!
+  char ** lines = NULL;
+  char * line = NULL;
+  size_t sz;
+  size_t i = 0;
+  size_t j = 0;
+  if (argc == 1) {
+    printf("Please input strings wanted to be sorted.\n");
 
+    while (getline(&line, &sz, stdin) >= 0) {
+      lines = realloc(lines, (i + 1) * sizeof(*lines));
+      lines[i] = line;
+      line = NULL;
+      i++;
+    }
+    free(line);
+    sortData(lines, i);
+    for (j = 0; j < i; j++) {
+      printf("Output: %s", lines[j]);
+      free(lines[j]);
+    }
+    free(lines);
+    printf("Success of all processing!");
+    return EXIT_SUCCESS;
+  }
+
+  for (int n = 1; n < argc; n++) {
+    FILE * f = fopen(argv[n], "r");
+    if (f == NULL) {
+      perror("Could not open file");
+      return EXIT_FAILURE;
+    }
+
+    while (getline(&line, &sz, f) >= 0) {
+      lines = realloc(lines, (i + 1) * sizeof(*lines));
+      lines[i] = line;
+      line = NULL;
+      i++;
+    }
+    free(line);
+    sortData(lines, i);
+    for (j = 0; j < i; j++) {
+      printf("%s", lines[j]);
+      free(lines[j]);
+    }
+    free(lines);
+    if (fclose(f) != 0) {
+      perror("Failed to close the input file!");
+      return EXIT_FAILURE;
+    }
+  }
+  printf("Success of all processing!");
   return EXIT_SUCCESS;
 }
