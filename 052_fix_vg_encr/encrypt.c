@@ -54,6 +54,6 @@ int main(int argc, char ** argv) {
     perror("Failed to close the input file!");
     return EXIT_FAILURE;
   }
-  free(outFileName);
+  free(outFileName);  //
   return EXIT_SUCCESS;
 }
