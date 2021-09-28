@@ -18,7 +18,7 @@ int main(int argc, char ** argv) {
   //WRITE YOUR CODE HERE!
   char ** lines = NULL;
   char * line = NULL;
-  size_t sz;
+  size_t sz = 0;
   size_t i = 0;
   size_t j = 0;
   if (argc == 1) {
@@ -47,7 +47,10 @@ int main(int argc, char ** argv) {
       perror("Could not open file");
       return EXIT_FAILURE;
     }
-
+    line = NULL;
+    lines = NULL;
+    sz = 0;
+    i = 0;
     while (getline(&line, &sz, f) >= 0) {
       lines = realloc(lines, (i + 1) * sizeof(*lines));
       lines[i] = line;
