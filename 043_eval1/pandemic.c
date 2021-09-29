@@ -30,6 +30,10 @@ country_t parseLine(char * line) {
     ans.name[i] = (*p);
     // printf("%c", *p);
     i++;
+    if (i == 64) {
+      perror("Courntry name is too long.\n");
+      exit(EXIT_FAILURE);
+    }
     p++;
   }
   ans.name[i] = '\0';
@@ -108,18 +112,23 @@ void printCountryWithMax(country_t * countries,
   size_t x = 0;
   char country_name[64];
   unsigned same = 0;
+  int xdiffe = 0;
   for (size_t i = 0; i < n_countries; i++) {
     for (size_t j = 0; j < n_days; j++) {
-      if (temp == data[i][j]) {
-        same = temp;
-      }
       if (temp < data[i][j]) {
         temp = data[i][j];
         x = i;
+        continue;
+      }
+      if (temp == data[i][j]) {
+        same = temp;
+        if (i != x) {
+          xdiffe = 1;
+        }
       }
     }
   }
-  if (temp == same) {
+  if ((temp == same) && xdiffe) {
     printf("There is a tie between at least two countries");
     return;
   }
