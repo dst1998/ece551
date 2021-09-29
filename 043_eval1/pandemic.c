@@ -1,5 +1,6 @@
 #include "pandemic.h"
 
+#include "errno.h"
 #include "stdint.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -47,6 +48,10 @@ country_t parseLine(char * line) {
   }
   if (*p >= 48 && *p <= 57) {
     ans.population = strtoul(p, NULL, 10);
+    if (errno == 34) {
+      perror("too long number");
+      exit(EXIT_FAILURE);
+    }
     //printf("Correct!");  //
     return ans;
   }
@@ -57,6 +62,10 @@ country_t parseLine(char * line) {
     exit(EXIT_FAILURE);
   }
   ans.population = (uint64_t)(0 - strtoul(p, NULL, 10));
+  if (errno == 34) {
+    perror("too long number");
+    exit(EXIT_FAILURE);
+  }
   // printf("Correct!");  //
   return ans;
 }
