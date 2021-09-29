@@ -1,6 +1,6 @@
-Grading at 09/29/2021:02:58:39.173653
-For commit ID e2a24f56ebb035b66c54caf06d02a435bb43d5e4
-Grading at Tue Sep 28 22:58:33 EDT 2021
+Grading at 09/29/2021:04:45:43.157062
+For commit ID c619a5b5cc0fce993556928d1876228c91eb99a0
+Grading at Wed Sep 29 00:45:31 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -8,75 +8,36 @@ rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
 Test case printCountries invalid1.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid11.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid12.csv
-Our printCountries does not consider this an error case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid2.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid21.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid212.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid213.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid22.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid23.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid24.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid25.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid26.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid27.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid28.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries invalid29.csv
-Our printCountries does not consider this an error case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid3.csv
-Our printCountries does not consider this an error case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case printCountries invalid31.csv
-Our printCountries does not consider this an error case
+Test case printCountries invalid4.csv
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case printCountries invalid32.csv
-Our printCountries does not consider this an error case
+Test case printCountries invalid5.csv
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case printCountries invalid33.csv
-Our printCountries does not consider this an error case
+Test case printCountries invalid6.csv
+Your program successfully indicated a failure case
 
 Compiling printRunningAvg
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
 +-----------------------------------------------------------------------+
 Test case printRunningAvg population.csv daily_small.csv
-Your program successfully indicated a failure case
+Our printRunningAvg does not consider this an error case
 
 Compiling printCumulative
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
 +-----------------------------------------------------------------------+
 Test case printCumulative population.csv daily_small.csv
-Your program successfully indicated a failure case
+Our printCumulative does not consider this an error case
 
 Compiling printDailyMax
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -89,7 +50,22 @@ Compiling printCountries
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
+Test case printCountries valid1.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries valid2.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries valid3.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries valid4.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
 Test case printCountries population.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries population1.csv
 Your file matched the expected output
 
 Compiling printRunningAvg
@@ -97,24 +73,21 @@ rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
 +-----------------------------------------------------------------------+
 Test case printRunningAvg population.csv daily_small.csv
-Line_1_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 
 Compiling printCumulative
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
 +-----------------------------------------------------------------------+
 Test case printCumulative population.csv daily_small.csv
-Line_1_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 
 Compiling printDailyMax
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
 +-----------------------------------------------------------------------+
 Test case printDailyMax population.csv daily_small.csv
-Line_1_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
