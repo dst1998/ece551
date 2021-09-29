@@ -81,8 +81,8 @@ void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) 
     printf("Could not open file.\n");
     exit(EXIT_FAILURE);
   }
-  if (!n_days || !pop) {
-    printf("Wrong number of day or population.\n");
+  if (!n_days) {
+    printf("Wrong number of day.\n");
     exit(EXIT_FAILURE);
   }
   unsigned total = 0;
@@ -102,8 +102,7 @@ void printCountryWithMax(country_t * countries,
     exit(EXIT_FAILURE);
   }
   if (!n_days || !n_countries) {
-    printf("Wrong number of day or country.\n");
-    exit(EXIT_FAILURE);
+    return;
   }
   unsigned temp = 0;
   size_t x = 0;
@@ -120,11 +119,11 @@ void printCountryWithMax(country_t * countries,
       }
     }
   }
-  unsigned number_cases = temp;
-
-  strncpy(country_name, countries[x].name, 64);
-  printf("%s has the most daily cases with %u\n", country_name, number_cases);
   if (temp == same) {
     printf("There is a tie between at least two countries");
+    return;
   }
+  unsigned number_cases = temp;
+  strncpy(country_name, countries[x].name, 64);
+  printf("%s has the most daily cases with %u\n", country_name, number_cases);
 }
