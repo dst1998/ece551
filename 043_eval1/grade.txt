@@ -1,6 +1,6 @@
-Grading at 09/29/2021:02:05:53.606684
-For commit ID b1ea34273e19cced5d8df58b1a1bb33f7ef98ef7
-Grading at Tue Sep 28 22:05:47 EDT 2021
+Grading at 09/29/2021:02:19:41.789847
+For commit ID 191cf638cee5dce87b800dfc531d1e2792b248af
+Grading at Tue Sep 28 22:19:35 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -10,10 +10,58 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o pri
 Test case printCountries invalid1.csv
 Our printCountries does not consider this an error case
 +-----------------------------------------------------------------------+
+Test case printCountries invalid11.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid12.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
 Test case printCountries invalid2.csv
 Our printCountries does not consider this an error case
 +-----------------------------------------------------------------------+
+Test case printCountries invalid21.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid212.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid213.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid22.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid23.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid24.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid25.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid26.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid27.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid28.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid29.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
 Test case printCountries invalid3.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid31.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid32.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
+Test case printCountries invalid33.csv
 Our printCountries does not consider this an error case
 
 Compiling printRunningAvg
