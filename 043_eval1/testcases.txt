@@ -5,8 +5,6 @@ printCountries invalid3.csv
 printCountries invalid4.csv
 printCountries invalid5.csv
 printCountries invalid6.csv
-printRunningAvg population.csv daily_small1.csv
-printDailyMax population.csv daily_small1.csv
 
 #success
 printCountries valid1.csv
@@ -19,3 +17,5 @@ printRunningAvg population.csv daily_small.csv
 printRunningAvg population.csv daily_small1.csv
 printCumulative population.csv daily_small.csv
 printDailyMax population.csv daily_small.csv
+printRunningAvg population.csv daily_small1.csv
+printDailyMax population.csv daily_small1.csv
