@@ -43,18 +43,18 @@ country_t parseLine(char * line) {
   }
   if (*p >= 48 && *p <= 57) {
     ans.population = atoi(p);
+    printf("Correct!");  //
     return ans;
   }
-  {  //*p==45
-    p++;
-    if (*p < 48 || *p > 57) {
-      perror("Wrong input of population.\n");
-      exit(EXIT_FAILURE);
-    }
-    ans.population = (uint64_t)-atoi(p);
-    //printf("\n");
-    return ans;
+  //*p==45
+  p++;
+  if (*p < 48 || *p > 57) {
+    perror("Wrong input of population.\n");
+    exit(EXIT_FAILURE);
   }
+  ans.population = (uint64_t)(0 - atoi(p));
+  printf("Correct!");  //
+  return ans;
 }
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
