@@ -37,7 +37,7 @@ country_t parseLine(char * line) {
   while (*p == ' ') {
     p++;
   }
-  if ((*p < '0' || *p > '9') && *p != '-') {  //45 is "-"
+  if ((*p < 48 || *p > 57) && *p != 45) {  //45 is "-"
     perror("Wrong input of population.\n");
     exit(EXIT_FAILURE);
   }
@@ -63,8 +63,7 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
     exit(EXIT_FAILURE);
     }*/
   if (n_days <= 6) {
-    printf("Wrong number of days.\n");
-    exit(EXIT_FAILURE);
+    return;
   }
   double total = 0;
   for (size_t i = 0; i < n_days - 6; i++) {
