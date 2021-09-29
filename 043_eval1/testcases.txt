@@ -1,30 +1,21 @@
 #error
 printCountries invalid1.csv
-printCountries invalid11.csv
-printCountries invalid12.csv
-
 printCountries invalid2.csv
-printCountries invalid21.csv
-printCountries invalid212.csv
-printCountries invalid213.csv
-printCountries invalid22.csv
-printCountries invalid23.csv
-printCountries invalid24.csv
-printCountries invalid25.csv
-printCountries invalid26.csv
-printCountries invalid27.csv
-printCountries invalid28.csv
-printCountries invalid29.csv
 printCountries invalid3.csv
-printCountries invalid31.csv
-printCountries invalid32.csv
-printCountries invalid33.csv
+printCountries invalid4.csv
+printCountries invalid5.csv
+printCountries invalid6.csv
 printRunningAvg population.csv daily_small.csv
 printCumulative population.csv daily_small.csv
 printDailyMax population.csv
 
 #success
+printCountries valid1.csv
+printCountries valid2.csv
+printCountries valid3.csv
+printCountries valid4.csv
 printCountries population.csv
+printCountries population1.csv
 printRunningAvg population.csv daily_small.csv
 printCumulative population.csv daily_small.csv
 printDailyMax population.csv daily_small.csv

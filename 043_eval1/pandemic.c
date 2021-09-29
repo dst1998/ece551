@@ -37,12 +37,12 @@ country_t parseLine(char * line) {
   while (*p == ' ') {
     p++;
   }
-  if ((*p < 48 || *p > 57) && *p != 45) {  //45 is "-"
+  if ((*p < '0' || *p > '9') && *p != '-') {  //45 is "-"
     perror("Wrong input of population.\n");
     exit(EXIT_FAILURE);
   }
   if (*p >= 48 && *p <= 57) {
-    ans.population = atoi(p);
+    ans.population = strtoul(p, NULL, 10);
     //printf("Correct!");  //
     return ans;
   }
@@ -52,16 +52,16 @@ country_t parseLine(char * line) {
     perror("Wrong input of population.\n");
     exit(EXIT_FAILURE);
   }
-  ans.population = (uint64_t)(0 - atoi(p));
+  ans.population = (uint64_t)(0 - strtoul(p, NULL, 10));
   // printf("Correct!");  //
   return ans;
 }
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
-  if (data == NULL) {
+  /*if (data == NULL) {
     printf("Could not open file.\n");
     exit(EXIT_FAILURE);
-  }
+    }*/
   if (n_days <= 6) {
     printf("Wrong number of days.\n");
     exit(EXIT_FAILURE);
