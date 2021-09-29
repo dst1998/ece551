@@ -53,7 +53,7 @@ country_t parseLine(char * line) {
     exit(EXIT_FAILURE);
   }
   ans.population = (uint64_t)(0 - atoi(p));
-  printf("Correct!");  //
+  // printf("Correct!");  //
   return ans;
 }
 
