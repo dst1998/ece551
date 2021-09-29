@@ -43,7 +43,7 @@ country_t parseLine(char * line) {
   }
   if (*p >= 48 && *p <= 57) {
     ans.population = atoi(p);
-    printf("Correct!");  //
+    //printf("Correct!");  //
     return ans;
   }
   //*p==45
