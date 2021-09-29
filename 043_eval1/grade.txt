@@ -1,6 +1,6 @@
-Grading at 09/27/2021:03:46:38.078266
-For commit ID e54d7de192dd0cea6a93bcdd3ea3d15ab35e9e0d
-Grading at Sun Sep 26 23:46:31 EDT 2021
+Grading at 09/29/2021:01:52:00.323182
+For commit ID 8e0025037b6002c630c19ac1154b965c03880214
+Grading at Tue Sep 28 21:51:52 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -11,6 +11,9 @@ Test case printCountries invalid1.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid2.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries invalid3.csv
 Your program successfully indicated a failure case
 
 Compiling printRunningAvg
@@ -47,7 +50,7 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o pr
 +-----------------------------------------------------------------------+
 Test case printRunningAvg population.csv daily_small.csv
 Line_1_did_not_match
-Your file did not match the expected ouput
+Your file did not match the expected output
 
 Compiling printCumulative
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -55,7 +58,7 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o pr
 +-----------------------------------------------------------------------+
 Test case printCumulative population.csv daily_small.csv
 Line_1_did_not_match
-Your file did not match the expected ouput
+Your file did not match the expected output
 
 Compiling printDailyMax
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -63,7 +66,7 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o prin
 +-----------------------------------------------------------------------+
 Test case printDailyMax population.csv daily_small.csv
 Line_1_did_not_match
-Your file did not match the expected ouput
+Your file did not match the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
