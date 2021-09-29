@@ -1,6 +1,6 @@
-Grading at 09/29/2021:02:19:41.789847
-For commit ID 191cf638cee5dce87b800dfc531d1e2792b248af
-Grading at Tue Sep 28 22:19:35 EDT 2021
+Grading at 09/29/2021:02:53:58.763428
+For commit ID 9593c98e32f408c55091cf698f25eeb242585653
+Grading at Tue Sep 28 22:53:52 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -69,14 +69,14 @@ rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
 +-----------------------------------------------------------------------+
 Test case printRunningAvg population.csv daily_small.csv
-Your program successfully indicated a failure case
+Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Your program successfully indicated a failure case
 
 Compiling printCumulative
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
 +-----------------------------------------------------------------------+
 Test case printCumulative population.csv daily_small.csv
-Your program successfully indicated a failure case
+Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Correct!Your program successfully indicated a failure case
 
 Compiling printDailyMax
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -90,7 +90,8 @@ rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
 Test case printCountries population.csv
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected output
 
 Compiling printRunningAvg
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -98,6 +99,7 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o pr
 +-----------------------------------------------------------------------+
 Test case printRunningAvg population.csv daily_small.csv
 Line_1_did_not_match
+Line_2_did_not_match
 Your file did not match the expected output
 
 Compiling printCumulative
@@ -106,6 +108,7 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o pr
 +-----------------------------------------------------------------------+
 Test case printCumulative population.csv daily_small.csv
 Line_1_did_not_match
+Line_2_did_not_match
 Your file did not match the expected output
 
 Compiling printDailyMax
@@ -114,6 +117,7 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o prin
 +-----------------------------------------------------------------------+
 Test case printDailyMax population.csv daily_small.csv
 Line_1_did_not_match
+Line_2_did_not_match
 Your file did not match the expected output
 
 You have FAILED one or more of your test cases
