@@ -13,8 +13,17 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   size_t sz = 0;
   FILE * f = fopen(filename, "r");
   while (getline(&key, &sz, f) >= 0) {
+    char * p = key;
+    while (*p != '\n') {
+      p++;
+    }
+    *p = '\0';
+
+    //printf("k: %s\n", key);
     char * value = lookupValue(kvPairs, key);
+    // printf("v: %s\n", value);
     addCount(c, value);
+    key = NULL;
   }
   free(key);
   if (fclose(f)) {
@@ -46,6 +55,7 @@ int main(int argc, char ** argv) {
     //close f
     if (fclose(f)) {
       perror("Cannot close the file.\n");
+      exit(EXIT_FAILURE);
     }
     //free the memory for outName and c
     free(outName);
