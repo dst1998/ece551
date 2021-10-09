@@ -20,7 +20,7 @@ void addCount(counts_t * c, const char * name) {
   }
   int i = 0;
   for (i = 0; i < c->size; i++) {
-    if (strcmp(name, c->array[i]->string)) {
+    if (strcmp(name, c->array[i]->string) == 0) {  //name existed.
       c->array[i]->cnt++;
       return;
     }
