@@ -23,7 +23,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
     char * value = lookupValue(kvPairs, key);
     // printf("v: %s\n", value);
     addCount(c, value);
-    key = NULL;
+    //key = NULL;
   }
   free(key);
   if (fclose(f)) {
