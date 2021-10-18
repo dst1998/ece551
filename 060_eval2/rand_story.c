@@ -7,13 +7,14 @@
 int check_underscore(FILE * f) {
   char * line = NULL;
   size_t sz = 0;
-  char * p =
-      NULL;  // p will ponits to every char in the line got by getline fuction later.
+  // p will ponits to every char in the line got by getline fuction later.
+  char * p = NULL;
   //reading lines from the file f.
   while (getline(&line, &sz, f) >= 0) {
     // printf("check in it success.\n");  //
     p = line;
-    int cnt = 0;  //record the number of underscore in a line.
+    //cnt records the number of underscore in a line.
+    int cnt = 0;
     //counting the number of underscore in a line.
     while (*p != '\n') {
       if (*p == '_') {
@@ -34,8 +35,7 @@ int check_underscore(FILE * f) {
   return EXIT_SUCCESS;
 }
 
-void replaceBlank(FILE * f, catarray_t * cats) {
-  //printf("in replaceblank.\n");  //
+int check_blank(FILE * f, catarray_t * cats) {
   char * line = NULL;
   size_t sz = 0;
   char * p = NULL;
@@ -49,13 +49,78 @@ void replaceBlank(FILE * f, catarray_t * cats) {
   while ((len = getline(&line, &sz, f)) >= 0) {
     //printf("len = %d\n", len);  //
     p = line;
-    int underscore =
-        0;  // become 1 if the beginning underscore of a category name appears.
-    char * category =
-        NULL;   //string for storing category name from input story template file.
-    int i = 0;  //record the number of char of a category name.
+    // "underscore" becomes 1 if the beginning underscore of a category name appears.
+    int underscore = 0;
+    //string for storing category name from input story template file.
+    char * category = NULL;
+    //record the number of char of a category name.
+    int i = 0;
     while (*p != '\0') {
-      if (underscore == 0) {  // no beginning undersocre has appeared.
+      // if: no beginning undersocre has appeared.
+      if (underscore == 0) {
+        if (*p == '_') {
+          underscore = 1;
+        }
+      }
+      //else: beginning underscore of a blank appears.
+      else {
+        if (*p != '_') {
+          category = realloc(category, (i + 1) * sizeof(*category));
+          category[i] = *p;
+          i++;
+        }
+        //ending underscore appears, and category name captured.
+        else {
+          underscore = 0;
+          category = realloc(category, (i + 1) * sizeof(*category));
+          category[i] = '\0';
+          //printf("%s", chooseWord(category, cats));
+          dest = judgeBlank(category, cats, usedWords);
+          //printf("%s", dest);////
+          usedWords->words = realloc(
+              usedWords->words, (usedWords->n_words + 1) * sizeof(*usedWords->words));
+          usedWords->words[usedWords->n_words] = dest;
+          usedWords->n_words++;
+          i = 0;
+          free(category);
+          category = NULL;
+        }
+      }
+      p++;
+    }
+  }
+  free(line);
+  for (size_t i = 0; i < usedWords->n_words; i++) {
+    free(usedWords->words[i]);
+  }
+  free(usedWords->words);
+  free(usedWords);
+  return EXIT_SUCCESS;
+}
+
+void replaceBlank(FILE * f, catarray_t * cats) {
+  char * line = NULL;
+  size_t sz = 0;
+  char * p = NULL;
+  // p will ponits to every char in the line got by getline fuction later.
+  //reading lines from the file f.
+  int len = 0;
+  category_t * usedWords = malloc(sizeof(*usedWords));
+  usedWords->words = NULL;
+  usedWords->n_words = 0;
+  char * dest = NULL;
+  while ((len = getline(&line, &sz, f)) >= 0) {
+    //printf("len = %d\n", len);  //
+    p = line;
+    // "underscore" becomes 1 if the beginning underscore of a category name appears.
+    int underscore = 0;
+    //string for storing category name from input story template file.
+    char * category = NULL;
+    //record the number of char of a category name.
+    int i = 0;
+    while (*p != '\0') {
+      // if: no beginning undersocre has appeared.
+      if (underscore == 0) {
         if (*p != '_') {
           printf("%c", *p);
         }
@@ -63,14 +128,15 @@ void replaceBlank(FILE * f, catarray_t * cats) {
           underscore = 1;
         }
       }
-
-      else {  //beginning underscore of a blank appears.
+      //else: beginning underscore of a blank appears.
+      else {
         if (*p != '_') {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = *p;
           i++;
         }
-        else {  //ending underscore appears, and category name captured.
+        //ending underscore appears, and category name captured.
+        else {
           underscore = 0;
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';
@@ -79,8 +145,7 @@ void replaceBlank(FILE * f, catarray_t * cats) {
           printf("%s", dest);
           usedWords->words = realloc(
               usedWords->words, (usedWords->n_words + 1) * sizeof(*usedWords->words));
-          usedWords->words[usedWords->n_words] =
-              dest;  ///////////////////////////////////
+          usedWords->words[usedWords->n_words] = dest;
           usedWords->n_words++;
           i = 0;
           free(category);
@@ -135,13 +200,14 @@ char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords) {
 int check_colon(FILE * f) {
   char * line = NULL;
   size_t sz = 0;
-  char * p =
-      NULL;  // p will ponits to every char in the line got by getline fuction later.
+  // p will ponits to every char in the line got by getline fuction later.
+  char * p = NULL;
   //reading lines from the file f.
   while (getline(&line, &sz, f) >= 0) {
     // printf("check in it success.\n");  //
     p = line;
-    int cnt = 0;  //record the number of colon in a line.
+    //record the number of colon in a line.
+    int cnt = 0;
     //counting the number of colon in a line.
     while (*p != '\0') {
       if (*p == ':') {
@@ -173,11 +239,14 @@ catarray_t * readCate(FILE * f, catarray_t * cats) {
   while ((len = getline(&line, &sz, f)) >= 0) {
     //printf("len = %d\n", len);  //
     p = line;
-    int colon = 0;  // become 1 if the colon appears.
-    char * category =
-        NULL;  //string for storing category name from input story template file.
-    char * word = NULL;  //string for stroring word of the category.
-    size_t i = 0;        //record the number of char of a category name.
+    //"colon" becomes 1 if the colon appears.
+    int colon = 0;
+    //string for storing category name from input story template file.
+    char * category = NULL;
+    //string for stroring word of the category.
+    char * word = NULL;
+    //record the number of char of a category/word.
+    size_t i = 0;
     while (*p != '\n') {
       if (colon == 0) {  // no colon has appeared.
         if (*p != ':') {
@@ -192,8 +261,8 @@ catarray_t * readCate(FILE * f, catarray_t * cats) {
           i = 0;
         }
       }
-
-      else {  //a colon has appeared.
+      //a colon has appeared.
+      else {
         word = realloc(word, (i + 1) * sizeof(*word));
         word[i] = *p;
         i++;
@@ -203,7 +272,8 @@ catarray_t * readCate(FILE * f, catarray_t * cats) {
     word = realloc(word, (i + 1) * sizeof(*word));
     word[i] = '\0';  //word captured.
 
-    if (cats->n == 0) {  //malloc if array has nothing.
+    //malloc if array has nothing.
+    if (cats->n == 0) {
       cats->arr = malloc(sizeof(*cats->arr));
       cats->arr[0].n_words = 0;
       cats->arr[0].name = category;

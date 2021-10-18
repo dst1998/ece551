@@ -31,6 +31,12 @@ int main(int argc, char ** argv) {
   if (check_underscore(f_story)) {  //return 1, checking failed.
     exit(EXIT_FAILURE);
   }
+  /////////////////////////////////
+  rewind(f_story);                   //make f back to the beginning of file.
+  if (check_blank(f_words, cats)) {  //return 1, checking failed.
+    exit(EXIT_FAILURE);
+  }
+  /////////////////////////////////
   rewind(f_story);  //make f back to the beginning of file.
   replaceBlank(f_story, cats);
 
@@ -39,6 +45,7 @@ int main(int argc, char ** argv) {
       free(cats->arr[i].words[j]);
     }
     free(cats->arr[i].words);
+    free(cats->arr[i].name);
   }
 
   free(cats->arr);

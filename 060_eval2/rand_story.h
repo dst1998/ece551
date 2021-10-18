@@ -8,6 +8,8 @@
 
 //check if the number of underscore in each line is a even.
 int check_underscore(FILE * f);
+//check if the blank is under requirement.//
+int check_blank(FILE * f, catarray_t * cats);
 //replace blank with category name and print.
 void replaceBlank(FILE * f, catarray_t * cats);
 //judge if the blank is catagory or valid int.
