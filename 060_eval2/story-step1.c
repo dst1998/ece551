@@ -13,11 +13,12 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //print if the number of underscore is correct.
-  if (!check_underscore(f)) {  //return 0, checking done with success.
-    //printf("begin repalcing.\n");  //
-    rewind(f);  //make f back to the beginning of file.
-    replaceBlank(f, NULL);
+  if (check_underscore(f)) {  //return 0, checking done with success.
+    exit(EXIT_FAILURE);
   }
+  rewind(f);  //make f back to the beginning of file.
+  replaceBlank(f, NULL);
+
   if (fclose(f)) {
     printf("Cannot close the input file!\n");
     exit(EXIT_FAILURE);

@@ -34,6 +34,16 @@ int main(int argc, char ** argv) {
   rewind(f_story);  //make f back to the beginning of file.
   replaceBlank(f_story, cats);
 
+  for (size_t i = 0; i < cats->n; i++) {
+    for (size_t j = 0; j < cats->arr[i].n_words; j++) {
+      free(cats->arr[i].words[j]);
+    }
+    free(cats->arr[i].words);
+  }
+
+  free(cats->arr);
+  free(cats);
+
   if (fclose(f_words)) {
     printf("Cannot close the words input file!\n");
     exit(EXIT_FAILURE);

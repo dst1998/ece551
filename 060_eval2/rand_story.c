@@ -42,6 +42,10 @@ void replaceBlank(FILE * f, catarray_t * cats) {
   // p will ponits to every char in the line got by getline fuction later.
   //reading lines from the file f.
   int len = 0;
+  category_t * usedWords = malloc(sizeof(*usedWords));
+  usedWords->words = NULL;
+  usedWords->n_words = 0;
+  char * dest = NULL;
   while ((len = getline(&line, &sz, f)) >= 0) {
     //printf("len = %d\n", len);  //
     p = line;
@@ -68,8 +72,16 @@ void replaceBlank(FILE * f, catarray_t * cats) {
         }
         else {  //ending underscore appears, and category name captured.
           underscore = 0;
+          category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';
-          printf("%s", chooseWord(category, cats));
+          //printf("%s", chooseWord(category, cats));
+          dest = judgeBlank(category, cats, usedWords);
+          printf("%s", dest);
+          usedWords->words = realloc(
+              usedWords->words, (usedWords->n_words + 1) * sizeof(*usedWords->words));
+          usedWords->words[usedWords->n_words] =
+              dest;  ///////////////////////////////////
+          usedWords->n_words++;
           i = 0;
           free(category);
           category = NULL;
@@ -79,7 +91,44 @@ void replaceBlank(FILE * f, catarray_t * cats) {
     }
   }
   free(line);
-  //printf("len = %d\n", len);
+  for (size_t i = 0; i < usedWords->n_words; i++) {
+    free(usedWords->words[i]);
+  }
+  free(usedWords->words);
+  free(usedWords);
+}
+
+char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords) {
+  char * dest = NULL;
+  char * tmp;
+  const char * tmp1;
+  int len = 0;
+  //if(blank[0])
+  int num = atoi(blank);
+  if (num != 0) {
+    tmp = usedWords->words[usedWords->n_words - num];
+    len = 1 + strlen(tmp);
+    dest = realloc(dest, len * sizeof(*dest));
+    int i = 0;
+    while (tmp[i] != '\0') {
+      dest[i] = tmp[i];
+      i++;
+    }
+    dest[i] = '\0';
+    return dest;
+  }
+  //return chooseWord(blank, cats);
+  tmp1 = chooseWord(blank, cats);
+  len = 1 + strlen(tmp1);
+  dest = realloc(dest, len * sizeof(*dest));
+  //strcpy(dest, tmp1);
+  int i = 0;
+  while (tmp1[i] != '\0') {
+    dest[i] = tmp1[i];
+    i++;
+  }
+  dest[i] = '\0';
+  return dest;
 }
 
 //check if there is a colon in every line in the file.
