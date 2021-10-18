@@ -10,4 +10,7 @@
 int check_underscore(FILE * f);
 //replace blank with category name and print.
 void replaceBlank(FILE * f, catarray_t * cats);
+//check if there is a colon in every line in the file.
+int check_colon(FILE * f);
+catarray_t * readCate(FILE * f, catarray_t * cats);
 #endif

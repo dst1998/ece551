@@ -2,6 +2,7 @@
 
 #include "stdio.h"
 #include "stdlib.h"
+#include "string.h"
 
 int check_underscore(FILE * f) {
   char * line = NULL;
@@ -79,4 +80,127 @@ void replaceBlank(FILE * f, catarray_t * cats) {
   }
   free(line);
   //printf("len = %d\n", len);
+}
+
+//check if there is a colon in every line in the file.
+int check_colon(FILE * f) {
+  char * line = NULL;
+  size_t sz = 0;
+  char * p =
+      NULL;  // p will ponits to every char in the line got by getline fuction later.
+  //reading lines from the file f.
+  while (getline(&line, &sz, f) >= 0) {
+    // printf("check in it success.\n");  //
+    p = line;
+    int cnt = 0;  //record the number of colon in a line.
+    //counting the number of colon in a line.
+    while (*p != '\0') {
+      if (*p == ':') {
+        cnt++;
+      }
+      p++;
+    }
+    //printf("cnt= %d\n", cnt);  //
+    //exit if the number of underscore in line is odd.
+    if (cnt != 1) {
+      printf("Wrong number of colon in a line!\n");
+      free(line);
+      return EXIT_FAILURE;
+    }
+  }
+  free(line);
+  //printf("check with success.\n");  //
+  return EXIT_SUCCESS;
+}
+
+catarray_t * readCate(FILE * f, catarray_t * cats) {
+  char * line = NULL;
+  size_t sz = 0;
+  char * p = NULL;
+  // p will ponits to every char in the line got by getline fuction later.
+  //reading lines from the file f.
+  int len = 0;  //
+
+  while ((len = getline(&line, &sz, f)) >= 0) {
+    //printf("len = %d\n", len);  //
+    p = line;
+    int colon = 0;  // become 1 if the colon appears.
+    char * category =
+        NULL;  //string for storing category name from input story template file.
+    char * word = NULL;  //string for stroring word of the category.
+    size_t i = 0;        //record the number of char of a category name.
+    while (*p != '\n') {
+      if (colon == 0) {  // no colon has appeared.
+        if (*p != ':') {
+          category = realloc(category, (i + 1) * sizeof(*category));
+          category[i] = *p;
+          i++;
+        }
+        else {
+          colon = 1;
+          category = realloc(category, (i + 1) * sizeof(*category));
+          category[i] = '\0';  //category captured.
+          i = 0;
+        }
+      }
+
+      else {  //a colon has appeared.
+        word = realloc(word, (i + 1) * sizeof(*word));
+        word[i] = *p;
+        i++;
+      }
+      p++;
+    }
+    word = realloc(word, (i + 1) * sizeof(*word));
+    word[i] = '\0';  //word captured.
+
+    if (cats->n == 0) {  //malloc if array has nothing.
+      cats->arr = malloc(sizeof(*cats->arr));
+      cats->arr[0].n_words = 0;
+      cats->arr[0].name = category;
+      cats->arr[0].words = malloc(sizeof(*cats->arr[cats->n].words));
+      cats->arr[0].words[cats->arr[cats->n].n_words] = word;
+      cats->arr[0].n_words++;
+      cats->n++;
+      continue;
+    }
+
+    i = 0;
+    size_t j = 0;
+
+    for (i = 0; i < cats->n; i++) {
+      if (!strcmp(category, cats->arr[i].name)) {  //equals,category existed.
+        free(category);
+        for (j = 0; j < cats->arr[i].n_words; j++) {
+          if (!strcmp(word, cats->arr[i].words[j])) {  //word existed.
+            free(word);
+            break;
+          }
+        }
+        if (j != cats->arr[i].n_words) {
+          continue;
+        }
+        cats->arr[i].words = realloc(
+            cats->arr[i].words, (cats->arr[i].n_words + 1) * sizeof(*cats->arr[i].words));
+        cats->arr[i].words[cats->arr[i].n_words] = word;
+        cats->arr[i].n_words++;
+        break;
+      }
+    }
+    if (i != cats->n) {
+      continue;
+    }
+    //realloc if array needs to be bigger.
+    cats->arr = realloc(cats->arr, (cats->n + 1) * sizeof(*cats->arr));
+    cats->arr[cats->n].n_words = 0;
+    cats->arr[cats->n].name = category;
+    cats->arr[cats->n].words = malloc(sizeof(*cats->arr[cats->n].words));
+    cats->arr[cats->n].words[cats->arr[cats->n].n_words] = word;
+    cats->arr[cats->n].n_words++;
+    cats->n++;
+  }
+  free(line);
+
+  //printf("len = %d\n", len);
+  return cats;
 }
