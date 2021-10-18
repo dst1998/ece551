@@ -9,11 +9,11 @@
 //check if the number of underscore in each line is a even.
 int check_underscore(FILE * f);
 //check if the blank is under requirement.//
-int check_blank(FILE * f, catarray_t * cats);
+int check_blank(FILE * f, catarray_t * cats, int usedOnce);
 //replace blank with category name and print.
-void replaceBlank(FILE * f, catarray_t * cats);
+void replaceBlank(FILE * f, catarray_t * cats, int usedOnce);
 //judge if the blank is catagory or valid int.
-char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords);
+char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords, int usedOnce);
 //check if there is a colon in every line in the file.
 int check_colon(FILE * f);
 //read the category/words from file f and stored in catarray cats.

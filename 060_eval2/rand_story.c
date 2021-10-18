@@ -31,22 +31,20 @@ int check_underscore(FILE * f) {
     }
   }
   free(line);
-  //printf("check with success.\n");  //
   return EXIT_SUCCESS;
 }
 
-int check_blank(FILE * f, catarray_t * cats) {
+int check_blank(FILE * f, catarray_t * cats, int usedOnce) {
   char * line = NULL;
   size_t sz = 0;
   char * p = NULL;
   // p will ponits to every char in the line got by getline fuction later.
   //reading lines from the file f.
-  int len = 0;
   category_t * usedWords = malloc(sizeof(*usedWords));
   usedWords->words = NULL;
   usedWords->n_words = 0;
   char * dest = NULL;
-  while ((len = getline(&line, &sz, f)) >= 0) {
+  while (getline(&line, &sz, f) >= 0) {
     //printf("len = %d\n", len);  //
     p = line;
     // "underscore" becomes 1 if the beginning underscore of a category name appears.
@@ -75,7 +73,7 @@ int check_blank(FILE * f, catarray_t * cats) {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';
           //printf("%s", chooseWord(category, cats));
-          dest = judgeBlank(category, cats, usedWords);
+          dest = judgeBlank(category, cats, usedWords, usedOnce);
           //printf("%s", dest);////
           usedWords->words = realloc(
               usedWords->words, (usedWords->n_words + 1) * sizeof(*usedWords->words));
@@ -98,18 +96,17 @@ int check_blank(FILE * f, catarray_t * cats) {
   return EXIT_SUCCESS;
 }
 
-void replaceBlank(FILE * f, catarray_t * cats) {
+void replaceBlank(FILE * f, catarray_t * cats, int usedOnce) {
   char * line = NULL;
   size_t sz = 0;
   char * p = NULL;
   // p will ponits to every char in the line got by getline fuction later.
   //reading lines from the file f.
-  int len = 0;
   category_t * usedWords = malloc(sizeof(*usedWords));
   usedWords->words = NULL;
   usedWords->n_words = 0;
   char * dest = NULL;
-  while ((len = getline(&line, &sz, f)) >= 0) {
+  while (getline(&line, &sz, f) >= 0) {
     //printf("len = %d\n", len);  //
     p = line;
     // "underscore" becomes 1 if the beginning underscore of a category name appears.
@@ -141,7 +138,7 @@ void replaceBlank(FILE * f, catarray_t * cats) {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';
           //printf("%s", chooseWord(category, cats));
-          dest = judgeBlank(category, cats, usedWords);
+          dest = judgeBlank(category, cats, usedWords, usedOnce);
           printf("%s", dest);
           usedWords->words = realloc(
               usedWords->words, (usedWords->n_words + 1) * sizeof(*usedWords->words));
@@ -163,7 +160,7 @@ void replaceBlank(FILE * f, catarray_t * cats) {
   free(usedWords);
 }
 
-char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords) {
+char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords, int usedOnce) {
   char * dest = NULL;
   char * tmp;
   const char * tmp1;
@@ -193,6 +190,32 @@ char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords) {
     i++;
   }
   dest[i] = '\0';
+  //delete used word this time if usedOnce is 1
+  if (usedOnce) {
+    int find = 0;
+    for (size_t i = 0; i < cats->n; i++) {
+      if (!strcmp(blank, cats->arr[i].name)) {
+        for (size_t j = 0; j < cats->arr[i].n_words; j++) {
+          if (!strcmp(tmp1, cats->arr[i].words[j])) {
+            //delete the tmp from the category.(switch to the end ,then resize the words)
+            char * p = cats->arr[i].words[j];
+            cats->arr[i].words[j] = cats->arr[i].words[cats->arr[i].n_words - 1];
+            cats->arr[i].words[cats->arr[i].n_words - 1] = p;
+            free(cats->arr[i].words[cats->arr[i].n_words - 1]);
+            cats->arr[i].words =
+                realloc(cats->arr[i].words,
+                        (cats->arr[i].n_words - 1) * sizeof(*cats->arr[i].words));
+            cats->arr[i].n_words--;
+            find = 1;
+            break;
+          }
+        }
+      }
+      if (find) {
+        break;
+      }
+    }
+  }
   return dest;
 }
 
@@ -204,7 +227,6 @@ int check_colon(FILE * f) {
   char * p = NULL;
   //reading lines from the file f.
   while (getline(&line, &sz, f) >= 0) {
-    // printf("check in it success.\n");  //
     p = line;
     //record the number of colon in a line.
     int cnt = 0;
@@ -215,7 +237,6 @@ int check_colon(FILE * f) {
       }
       p++;
     }
-    //printf("cnt= %d\n", cnt);  //
     //exit if the number of underscore in line is odd.
     if (cnt != 1) {
       printf("Wrong number of colon in a line!\n");
@@ -224,7 +245,6 @@ int check_colon(FILE * f) {
     }
   }
   free(line);
-  //printf("check with success.\n");  //
   return EXIT_SUCCESS;
 }
 
@@ -234,10 +254,7 @@ catarray_t * readCate(FILE * f, catarray_t * cats) {
   char * p = NULL;
   // p will ponits to every char in the line got by getline fuction later.
   //reading lines from the file f.
-  int len = 0;  //
-
-  while ((len = getline(&line, &sz, f)) >= 0) {
-    //printf("len = %d\n", len);  //
+  while (getline(&line, &sz, f) >= 0) {
     p = line;
     //"colon" becomes 1 if the colon appears.
     int colon = 0;
@@ -319,7 +336,5 @@ catarray_t * readCate(FILE * f, catarray_t * cats) {
     cats->n++;
   }
   free(line);
-
-  //printf("len = %d\n", len);
   return cats;
 }

@@ -1,13 +1,14 @@
 #include "rand_story.h"
 #include "stdio.h"
 #include "stdlib.h"
+#include "string.h"
 
 int main(int argc, char ** argv) {
-  if (argc != 3) {
+  if (argc != 3 && argc != 4) {
     perror("Wrong number of command line argiments!\n");
     exit(EXIT_FAILURE);
   }
-  FILE * f_words = fopen(argv[1], "r");
+  FILE * f_words = fopen(argv[argc - 2], "r");
   if (f_words == NULL) {
     perror("Cannot open the words input file!\n");
     exit(EXIT_FAILURE);
@@ -22,7 +23,7 @@ int main(int argc, char ** argv) {
   cats = readCate(f_words, cats);
   //printWords(cats);
 
-  FILE * f_story = fopen(argv[2], "r");
+  FILE * f_story = fopen(argv[argc - 1], "r");
   if (f_story == NULL) {
     perror("Cannot open the story input file!\n");
     exit(EXIT_FAILURE);
@@ -31,14 +32,18 @@ int main(int argc, char ** argv) {
   if (check_underscore(f_story)) {  //return 1, checking failed.
     exit(EXIT_FAILURE);
   }
-  /////////////////////////////////
-  rewind(f_story);                      //make f back to the beginning of file.
-  if (check_blank(f_words, cats, 0)) {  //return 1, checking failed.
+  int usedOnce = 0;
+  //if the second argument is "-n"
+  if (!strcmp(argv[1], "-n")) {
+    usedOnce = 1;
+  }
+  rewind(f_story);                             //make f back to the beginning of file.
+  if (check_blank(f_words, cats, usedOnce)) {  //return 1, checking failed.
     exit(EXIT_FAILURE);
   }
-  /////////////////////////////////
+
   rewind(f_story);  //make f back to the beginning of file.
-  replaceBlank(f_story, cats, 0);
+  replaceBlank(f_story, cats, usedOnce);
 
   for (size_t i = 0; i < cats->n; i++) {
     for (size_t j = 0; j < cats->arr[i].n_words; j++) {
