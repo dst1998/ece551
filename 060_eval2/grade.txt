@@ -1,6 +1,6 @@
-Grading at 10/19/2021:00:45:39.704660
-For commit ID b43d24b0709eff87e1192e673a654ae07437dbee
-Grading at Mon Oct 18 20:45:32 EDT 2021
+Grading at 10/19/2021:00:51:12.206529
+For commit ID 6180d7a14ea132c23e85eeef3d2c74b86ce40af4
+Grading at Mon Oct 18 20:51:05 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -11,7 +11,7 @@ gcc -o story-step1 story-step1.o rand_story.o provided.o
 rm story-step1.o
 +-----------------------------------------------------------------------+
 Test case story-step1 err_story.txt
-Your program successfully indicated a failure case
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step1 story.txt
 Your file matched the expected output
