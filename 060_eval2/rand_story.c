@@ -188,25 +188,24 @@ char * judgeBlank(char * blank,
   }
   //return chooseWord(blank, cats);
   if (firstcheck) {
-    if (!notinclude(cats, blank)) {
+    if (notinclude(cats, blank) == NULL) {
       perror("do not include this cate");
       exit(EXIT_FAILURE);
     }
-    dest = realloc(dest, sizeof(*dest));
-    dest[0] = '\0';
+    tmp1 = notinclude(cats, blank);
   }
   else {
     tmp1 = chooseWord(blank, cats);
-    len = 1 + strlen(tmp1);
-    dest = realloc(dest, len * sizeof(*dest));
-    //strcpy(dest, tmp1);
-    int i = 0;
-    while (tmp1[i] != '\0') {
-      dest[i] = tmp1[i];
-      i++;
-    }
-    dest[i] = '\0';
   }
+  len = 1 + strlen(tmp1);
+  dest = realloc(dest, len * sizeof(*dest));
+  //strcpy(dest, tmp1);
+  int i = 0;
+  while (tmp1[i] != '\0') {
+    dest[i] = tmp1[i];
+    i++;
+  }
+  dest[i] = '\0';
   //delete used word this time if usedOnce is 1
   if (usedOnce) {
     int find = 0;
@@ -236,13 +235,13 @@ char * judgeBlank(char * blank,
   return dest;
 }
 
-int notinclude(catarray_t * cats, char * blank) {
+char * notinclude(catarray_t * cats, char * blank) {
   for (size_t i = 0; i < cats->n; i++) {
     if (!strcmp(blank, cats->arr[i].name) && cats->arr[i].n_words > 0) {
-      return 1;
+      return cats->arr[i].words[0];
     }
   }
-  return 0;
+  return NULL;
 }
 
 //check if there is a colon in every line in the file.

@@ -19,7 +19,7 @@ char * judgeBlank(char * blank,
                   int usedOnce,
                   int firstcheck);
 
-int notinclude(catarray_t * cats, char * blank);
+char * notinclude(catarray_t * cats, char * blank);
 //check if there is a colon in every line in the file.
 int check_colon(FILE * f);
 //read the category/words from file f and stored in catarray cats.
