@@ -22,12 +22,13 @@ IntArray::~IntArray() {
 
 IntArray & IntArray::operator=(const IntArray & rhs) {
   if (this != &rhs) {
-    delete[] data;
-    data = new int[rhs.numElements];
-    numElements = rhs.numElements;
+    int * temp = new int[rhs.numElements];
     for (int i = 0; i < rhs.numElements; i++) {
-      data[i] = rhs.data[i];
+      temp[i] = rhs.data[i];
     }
+    delete[] data;  //
+    numElements = rhs.numElements;
+    data = temp;
   }
   return *this;
 }
