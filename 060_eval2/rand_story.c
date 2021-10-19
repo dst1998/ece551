@@ -238,7 +238,7 @@ int check_colon(FILE * f) {
       p++;
     }
     //exit if the number of underscore in line is odd.
-    if (cnt != 1) {
+    if (cnt == 0) {
       perror("Wrong number of colon in a line!\n");
       free(line);
       return EXIT_FAILURE;
