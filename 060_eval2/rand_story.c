@@ -25,7 +25,7 @@ int check_underscore(FILE * f) {
     //printf("cnt= %d\n", cnt);  //
     //exit if the number of underscore in line is odd.
     if (cnt % 2 != 0) {
-      printf("Wrong number of underscore in a line!\n");
+      perror("Wrong number of underscore in a line!\n");
       free(line);
       return EXIT_FAILURE;
     }

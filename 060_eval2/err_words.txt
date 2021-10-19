@@ -1,4 +1,4 @@
-:dragon
+::dragon
 animal:walrus
 place:cave
 adjective:peculiar
