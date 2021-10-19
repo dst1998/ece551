@@ -239,7 +239,7 @@ int check_colon(FILE * f) {
     }
     //exit if the number of underscore in line is odd.
     if (cnt != 1) {
-      printf("Wrong number of colon in a line!\n");
+      perror("Wrong number of colon in a line!\n");
       free(line);
       return EXIT_FAILURE;
     }
@@ -276,10 +276,10 @@ catarray_t * readCate(FILE * f, catarray_t * cats) {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';  //category captured.
           i = 0;
-          if (!strcmp(category, ":")) {  //if category is a colon ,exit.
+          /*if (!strcmp(category, ":")) {  //if category is a colon ,exit.
             perror("Category cannot be a colon!\n");
             exit(EXIT_FAILURE);
-          }
+	    }*/
         }
       }
       //a colon has appeared.
