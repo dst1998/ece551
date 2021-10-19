@@ -276,6 +276,10 @@ catarray_t * readCate(FILE * f, catarray_t * cats) {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';  //category captured.
           i = 0;
+          if (!strcmp(category, ":")) {  //if category is a colon ,exit.
+            perror("Category cannot be a colon!\n");
+            exit(EXIT_FAILURE);
+          }
         }
       }
       //a colon has appeared.
