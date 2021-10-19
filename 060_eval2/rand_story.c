@@ -60,6 +60,7 @@ int check_blank(FILE * f, catarray_t * cats, int usedOnce) {
       }
       //else: beginning underscore of a blank appears.
       else {
+        //printf("comming in!!!!!!!!!!!!!!!!!!!!!");
         if (*p != '_') {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = *p;
@@ -163,9 +164,9 @@ char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords, int u
   const char * tmp1;
   int len = 0;
   //if(blank[0])
-  int num = atoi(blank);
-  printf("%d", num);
-  if (num < 0 || usedWords->n_words - num < 0) {  ///////////////////////////////////
+  size_t num = atoi(blank);
+  //printf("%lu, %lu", num, usedWords->n_words);
+  if (num < 0 || usedWords->n_words < num) {  ///////////////////////////////////
     perror("Wrong int!\n");
     exit(EXIT_FAILURE);
   }

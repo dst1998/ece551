@@ -33,7 +33,7 @@ int main(int argc, char ** argv) {
   }
   /////////////////////////////////
   rewind(f_story);                      //make f back to the beginning of file.
-  if (check_blank(f_words, cats, 0)) {  //return 1, checking failed.
+  if (check_blank(f_story, cats, 0)) {  //return 1, checking failed.
     exit(EXIT_FAILURE);
   }
   /////////////////////////////////
