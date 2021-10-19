@@ -38,9 +38,23 @@ int main(int argc, char ** argv) {
     usedOnce = 1;
   }
   rewind(f_story);                             //make f back to the beginning of file.
-  if (check_blank(f_words, cats, usedOnce)) {  //return 1, checking failed.
+  if (check_blank(f_story, cats, usedOnce)) {  //return 1, checking failed.
     exit(EXIT_FAILURE);
   }
+  for (size_t i = 0; i < cats->n; i++) {
+    for (size_t j = 0; j < cats->arr[i].n_words; j++) {
+      free(cats->arr[i].words[j]);
+    }
+    free(cats->arr[i].words);
+    free(cats->arr[i].name);
+  }
+  free(cats->arr);
+  free(cats);
+
+  rewind(f_words);  //make f back to the beginning of file.
+  cats = malloc(sizeof(*cats));
+  cats->n = 0;
+  cats = readCate(f_words, cats);
 
   rewind(f_story);  //make f back to the beginning of file.
   replaceBlank(f_story, cats, usedOnce);

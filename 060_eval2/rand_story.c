@@ -187,7 +187,7 @@ char * judgeBlank(char * blank,
     return dest;
   }
   //return chooseWord(blank, cats);
-  if (firstcheck) {
+  if (firstcheck == 1) {
     if (notinclude(cats, blank) == NULL) {
       perror("do not include this cate");
       exit(EXIT_FAILURE);
