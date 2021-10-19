@@ -11,7 +11,6 @@ int check_underscore(FILE * f) {
   char * p = NULL;
   //reading lines from the file f.
   while (getline(&line, &sz, f) >= 0) {
-    // printf("check in it success.\n");  //
     p = line;
     //cnt records the number of underscore in a line.
     int cnt = 0;
@@ -45,7 +44,6 @@ int check_blank(FILE * f, catarray_t * cats, int usedOnce) {
   usedWords->n_words = 0;
   char * dest = NULL;
   while (getline(&line, &sz, f) >= 0) {
-    //printf("len = %d\n", len);  //
     p = line;
     // "underscore" becomes 1 if the beginning underscore of a category name appears.
     int underscore = 0;
@@ -107,7 +105,6 @@ void replaceBlank(FILE * f, catarray_t * cats, int usedOnce) {
   usedWords->n_words = 0;
   char * dest = NULL;
   while (getline(&line, &sz, f) >= 0) {
-    //printf("len = %d\n", len);  //
     p = line;
     // "underscore" becomes 1 if the beginning underscore of a category name appears.
     int underscore = 0;
@@ -167,6 +164,11 @@ char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords, int u
   int len = 0;
   //if(blank[0])
   int num = atoi(blank);
+  printf("%d", num);
+  if (num < 0 || usedWords->n_words - num < 0) {  ///////////////////////////////////
+    perror("Wrong int!\n");
+    exit(EXIT_FAILURE);
+  }
   if (num != 0) {
     tmp = usedWords->words[usedWords->n_words - num];
     len = 1 + strlen(tmp);
