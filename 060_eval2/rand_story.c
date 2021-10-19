@@ -72,7 +72,7 @@ int check_blank(FILE * f, catarray_t * cats, int usedOnce) {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';
           //printf("%s", chooseWord(category, cats));
-          dest = judgeBlank(category, cats, usedWords, usedOnce);
+          dest = judgeBlank(category, cats, usedWords, usedOnce, 1);
           //printf("%s", dest);////
           usedWords->words = realloc(
               usedWords->words, (usedWords->n_words + 1) * sizeof(*usedWords->words));
@@ -136,7 +136,7 @@ void replaceBlank(FILE * f, catarray_t * cats, int usedOnce) {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';
           //printf("%s", chooseWord(category, cats));
-          dest = judgeBlank(category, cats, usedWords, usedOnce);
+          dest = judgeBlank(category, cats, usedWords, usedOnce, 0);
           printf("%s", dest);
           usedWords->words = realloc(
               usedWords->words, (usedWords->n_words + 1) * sizeof(*usedWords->words));
@@ -158,7 +158,11 @@ void replaceBlank(FILE * f, catarray_t * cats, int usedOnce) {
   free(usedWords);
 }
 
-char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords, int usedOnce) {
+char * judgeBlank(char * blank,
+                  catarray_t * cats,
+                  category_t * usedWords,
+                  int usedOnce,
+                  int firstcheck) {
   char * dest = NULL;
   char * tmp;
   const char * tmp1;
@@ -183,16 +187,26 @@ char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords, int u
     return dest;
   }
   //return chooseWord(blank, cats);
-  tmp1 = chooseWord(blank, cats);
-  len = 1 + strlen(tmp1);
-  dest = realloc(dest, len * sizeof(*dest));
-  //strcpy(dest, tmp1);
-  int i = 0;
-  while (tmp1[i] != '\0') {
-    dest[i] = tmp1[i];
-    i++;
+  if (firstcheck) {
+    if (!notinclude(cats, blank)) {
+      perror("do not include this cate");
+      exit(EXIT_FAILURE);
+    }
+    dest = realloc(dest, sizeof(*dest));
+    dest[0] = '\0';
   }
-  dest[i] = '\0';
+  else {
+    tmp1 = chooseWord(blank, cats);
+    len = 1 + strlen(tmp1);
+    dest = realloc(dest, len * sizeof(*dest));
+    //strcpy(dest, tmp1);
+    int i = 0;
+    while (tmp1[i] != '\0') {
+      dest[i] = tmp1[i];
+      i++;
+    }
+    dest[i] = '\0';
+  }
   //delete used word this time if usedOnce is 1
   if (usedOnce) {
     int find = 0;
@@ -220,6 +234,15 @@ char * judgeBlank(char * blank, catarray_t * cats, category_t * usedWords, int u
     }
   }
   return dest;
+}
+
+int notinclude(catarray_t * cats, char * blank) {
+  for (size_t i = 0; i < cats->n; i++) {
+    if (!strcmp(blank, cats->arr[i].name) && cats->arr[i].n_words > 0) {
+      return 1;
+    }
+  }
+  return 0;
 }
 
 //check if there is a colon in every line in the file.
