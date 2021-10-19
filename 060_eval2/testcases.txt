@@ -1,6 +1,7 @@
 #error
-
-
+story-step3 words.txt err_story1.txt
+story-step3 words.txt err_story2.txt
+story-step3 words.txt err_story3.txt
 #success
 story-step1 err_story.txt
 story-step1 story.txt
