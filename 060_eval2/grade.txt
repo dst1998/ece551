@@ -1,6 +1,6 @@
-Grading at 10/19/2021:06:16:44.267553
-For commit ID 55bd9a63a6ac4e070156819666c6a3868eef04a2
-Grading at Tue Oct 19 02:16:34 EDT 2021
+Grading at 10/19/2021:06:42:23.166390
+For commit ID 91ceb0c587074443acd385264b3a9e93629934bd
+Grading at Tue Oct 19 02:42:13 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -17,6 +17,16 @@ Test case story-step3 words.txt err_story2.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt err_story3.txt
+Your program successfully indicated a failure case
+
+Compiling story-step4
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
+gcc -o story-step4 story-step4.o rand_story.o provided.o
+rm story-step4.o
++-----------------------------------------------------------------------+
+Test case story-step4 -n words.txt story2.txt
 Your program successfully indicated a failure case
 
 Compiling story-step1
@@ -68,10 +78,7 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
 gcc -o story-step4 story-step4.o rand_story.o provided.o
 rm story-step4.o
 +-----------------------------------------------------------------------+
-Test case story-step4 -n words.txt story2.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step4 -n words.txt story2.txt
+Test case story-step4 words.txt story2.txt
 Your file matched the expected output
 
 You have PASSED all of your test cases
