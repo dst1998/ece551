@@ -1,5 +1,6 @@
 #include "rand_story.h"
 
+#include "errno.h"
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
@@ -165,18 +166,20 @@ char * judgeBlank(char * blank,
                   int usedOnce,
                   int firstcheck) {
   char * dest = NULL;
-  //char * tmp;
+  char * tmp;
   const char * tmp1;
   int len = 0;
-  //size_t num = atoi(blank);
+  char * endptr = NULL;
+  unsigned long int ul_num = strtoul(blank, &endptr, 0);
   //printf("%lu, %lu", num, usedWords->n_words);//////////////////
-  //if (num < 0 || usedWords->n_words < num) {
-  /*if (usedWords->n_words < num) {
+  //if errno==ERRANGE,blank cannot be transfered to a num.
+  if (errno == ERANGE || usedWords->n_words < ul_num) {
     perror("Wrong int!\n");
     exit(EXIT_FAILURE);
   }
-  if (num != 0) {
-    tmp = usedWords->words[usedWords->n_words - num];
+  //if only numbers (no chars) are in blank.
+  if (ul_num != 0 && *endptr == '\0') {
+    tmp = usedWords->words[usedWords->n_words - ul_num];
     len = 1 + strlen(tmp);
     dest = realloc(dest, len * sizeof(*dest));
     int i = 0;
@@ -186,7 +189,7 @@ char * judgeBlank(char * blank,
     }
     dest[i] = '\0';
     return dest;
-    }*/
+  }
   //return chooseWord(blank, cats);/////////////
   if (firstcheck == 1) {
     if (notinclude(cats, blank) == NULL) {
