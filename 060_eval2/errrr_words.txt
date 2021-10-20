@@ -1,6 +1,6 @@
-0:dragon
-0:walrus
-s1:cave
-s2:peculiar
-s2:scary
-s2:peaceful
+-1:dragon
+-1:walrus
+s0:cave
+s0:peculiar
+s1:scary
+s1:peaceful

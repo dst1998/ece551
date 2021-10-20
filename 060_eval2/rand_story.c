@@ -164,10 +164,10 @@ char * judgeBlank(char * blank,
                   catarray_t * cats,
                   category_t * usedWords,
                   int usedOnce,
-                  int firstcheck) {
+                  int firstCheck) {
   char * dest = NULL;
-  char * tmp;
-  const char * tmp1;
+  char * p_u;        //pointer to certain word found in usedWords.
+  const char * p_c;  //pointer to certain word choosen from cats.
   int len = 0;
   char * endptr = NULL;
   unsigned long int ul_num = strtoul(blank, &endptr, 0);
@@ -179,34 +179,34 @@ char * judgeBlank(char * blank,
   }
   //if only numbers (no chars) are in blank.
   if (ul_num != 0 && *endptr == '\0') {
-    tmp = usedWords->words[usedWords->n_words - ul_num];
-    len = 1 + strlen(tmp);
+    p_u = usedWords->words[usedWords->n_words - ul_num];
+    len = 1 + strlen(p_u);
     dest = realloc(dest, len * sizeof(*dest));
     int i = 0;
-    while (tmp[i] != '\0') {
-      dest[i] = tmp[i];
+    while (p_u[i] != '\0') {
+      dest[i] = p_u[i];
       i++;
     }
     dest[i] = '\0';
     return dest;
   }
   //return chooseWord(blank, cats);/////////////
-  if (firstcheck == 1) {
-    if (notinclude(cats, blank) == NULL) {
+  if (firstCheck == 1) {
+    if (notInclude(cats, blank) == NULL) {
       perror("Do not include this category.");
       exit(EXIT_FAILURE);
     }
-    tmp1 = notinclude(cats, blank);
+    p_c = notInclude(cats, blank);
   }
   else {
-    tmp1 = chooseWord(blank, cats);
+    p_c = chooseWord(blank, cats);
   }
-  len = 1 + strlen(tmp1);
+  len = 1 + strlen(p_c);
   dest = realloc(dest, len * sizeof(*dest));
   //strcpy(dest, tmp1);
   int i = 0;
-  while (tmp1[i] != '\0') {
-    dest[i] = tmp1[i];
+  while (p_c[i] != '\0') {
+    dest[i] = p_c[i];
     i++;
   }
   dest[i] = '\0';
@@ -216,8 +216,8 @@ char * judgeBlank(char * blank,
     for (size_t i = 0; i < cats->n; i++) {
       if (!strcmp(blank, cats->arr[i].name)) {
         for (size_t j = 0; j < cats->arr[i].n_words; j++) {
-          if (!strcmp(tmp1, cats->arr[i].words[j])) {
-            //delete the tmp from the category.(switch to the end ,then resize the words)
+          if (!strcmp(p_c, cats->arr[i].words[j])) {
+            //delete the word from the category.(switch to the end ,then resize the words)
             char * p = cats->arr[i].words[j];
             cats->arr[i].words[j] = cats->arr[i].words[cats->arr[i].n_words - 1];
             cats->arr[i].words[cats->arr[i].n_words - 1] = p;
@@ -239,7 +239,7 @@ char * judgeBlank(char * blank,
   return dest;
 }
 
-char * notinclude(catarray_t * cats, char * blank) {
+char * notInclude(catarray_t * cats, char * blank) {
   for (size_t i = 0; i < cats->n; i++) {
     if (!strcmp(blank, cats->arr[i].name) && cats->arr[i].n_words > 0) {
       return cats->arr[i].words[0];

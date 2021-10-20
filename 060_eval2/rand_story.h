@@ -18,8 +18,8 @@ char * judgeBlank(char * blank,
                   category_t * usedWords,
                   int usedOnce,
                   int firstcheck);
-
-char * notinclude(catarray_t * cats, char * blank);
+//check if the blank(category) is included in the cats, return a word if cate exists.
+char * notInclude(catarray_t * cats, char * blank);
 //check if there is a colon in every line in the file.
 int check_colon(FILE * f);
 //read the category/words from file f and stored in catarray cats.
