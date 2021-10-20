@@ -1,6 +1,6 @@
-Grading at 10/20/2021:00:30:55.978738
-For commit ID 08326f92594a4c65ba45a84b6f5fa5d836ef32fd
-Grading at Tue Oct 19 20:30:45 EDT 2021
+Grading at 10/20/2021:01:00:13.583983
+For commit ID 83dc027cbaa72ad4741682a932d5545c5ac2d294
+Grading at Tue Oct 19 21:00:03 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -10,8 +10,10 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
 gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
-Test case story-step3 errrr_words.txt err_story1.txt
-Your program successfully indicated a failure case
+Test case story-step3 words.txt err_story2.txt
+Once upon a time, there was a walrus. This walrus lived in a very
+scary cave. One day, it left its scary cave and met a walrus.
+Your program did not indicate a failure case
 
 Compiling story-step4
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -85,10 +87,8 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
 gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
-Test case story-step3 words.txt err_story2.txt
-Line_1_did_not_match
-Line_2_did_not_match
-Your file did not match the expected output
+Test case story-step3 errrr_words.txt err_story1.txt
+Your file matched the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
