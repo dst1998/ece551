@@ -165,16 +165,17 @@ char * judgeBlank(char * blank,
                   int usedOnce,
                   int firstcheck) {
   char * dest = NULL;
-  char * tmp;
+  //char * tmp;
   const char * tmp1;
   int len = 0;
   size_t num = atoi(blank);
   //printf("%lu, %lu", num, usedWords->n_words);
-  if (num < 0 || usedWords->n_words < num) {  ///////////////////////////////////
+  //if (num < 0 || usedWords->n_words < num) {  ///////////////////////////////////
+  if (usedWords->n_words < num) {
     perror("Wrong int!\n");
     exit(EXIT_FAILURE);
   }
-  if (num != 0) {
+  /*if (num != 0) {
     tmp = usedWords->words[usedWords->n_words - num];
     len = 1 + strlen(tmp);
     dest = realloc(dest, len * sizeof(*dest));
@@ -185,7 +186,7 @@ char * judgeBlank(char * blank,
     }
     dest[i] = '\0';
     return dest;
-  }
+    }*/
   //return chooseWord(blank, cats);
   if (firstcheck == 1) {
     if (notinclude(cats, blank) == NULL) {
