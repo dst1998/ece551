@@ -1,5 +1,5 @@
 #error
-story-step3 errrr_words.txt err_story1.txt
+story-step3 words.txt err_story2.txt
 
 story-step4 -n words.txt story2.txt
 #success
@@ -12,4 +12,4 @@ story-step2 err_words.txt
 story-step3 words.txt story2.txt
 story-step3 words.txt err_story3.txt
 story-step4 words.txt story2.txt
-story-step3 words.txt err_story2.txt
+story-step3 errrr_words.txt err_story1.txt

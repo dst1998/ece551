@@ -100,11 +100,12 @@ void replaceBlank(FILE * f, catarray_t * cats, int usedOnce) {
   size_t sz = 0;
   char * p = NULL;
   // p will ponits to every char in the line got by getline fuction later.
-  //reading lines from the file f.
+  //mallloc usedWords to store the words used.
   category_t * usedWords = malloc(sizeof(*usedWords));
   usedWords->words = NULL;
   usedWords->n_words = 0;
   char * dest = NULL;
+  //reading lines from the file f.
   while (getline(&line, &sz, f) >= 0) {
     p = line;
     // "underscore" becomes 1 if the beginning underscore of a category name appears.
@@ -167,7 +168,6 @@ char * judgeBlank(char * blank,
   char * tmp;
   const char * tmp1;
   int len = 0;
-  //if(blank[0])
   size_t num = atoi(blank);
   //printf("%lu, %lu", num, usedWords->n_words);
   if (num < 0 || usedWords->n_words < num) {  ///////////////////////////////////
@@ -189,7 +189,7 @@ char * judgeBlank(char * blank,
   //return chooseWord(blank, cats);
   if (firstcheck == 1) {
     if (notinclude(cats, blank) == NULL) {
-      perror("do not include this cate");
+      perror("Do not include this category.");
       exit(EXIT_FAILURE);
     }
     tmp1 = notinclude(cats, blank);
