@@ -22,7 +22,6 @@ int check_underscore(FILE * f) {
       }
       p++;
     }
-    //printf("cnt= %d\n", cnt);  //
     //exit if the number of underscore in line is odd.
     if (cnt % 2 != 0) {
       perror("Wrong number of underscore in a line!\n");
@@ -61,7 +60,6 @@ int check_blank(FILE * f, catarray_t * cats, int usedOnce) {
       }
       //else: beginning underscore of a blank appears.
       else {
-        //printf("comming in!!!!!!!!!!!!!!!!!!!!!");
         if (*p != '_') {
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = *p;
@@ -137,7 +135,6 @@ void replaceBlank(FILE * f, catarray_t * cats, int usedOnce) {
           underscore = 0;
           category = realloc(category, (i + 1) * sizeof(*category));
           category[i] = '\0';
-          //printf("%s", chooseWord(category, cats));
           dest = judgeBlank(category, cats, usedWords, usedOnce, 0);
           printf("%s", dest);
           usedWords->words = realloc(
@@ -171,7 +168,6 @@ char * judgeBlank(char * blank,
   int len = 0;
   char * endptr = NULL;
   unsigned long int ul_num = strtoul(blank, &endptr, 0);
-  //printf("%lu, %lu", num, usedWords->n_words);//////////////////
   //if errno==ERRANGE,blank cannot be transfered to a num.
   if (errno == ERANGE || usedWords->n_words < ul_num) {
     perror("Wrong int!\n");
@@ -190,7 +186,7 @@ char * judgeBlank(char * blank,
     dest[i] = '\0';
     return dest;
   }
-  //return chooseWord(blank, cats);/////////////
+  //check: similar to chooseWord(blank, cats);
   if (firstCheck == 1) {
     if (notInclude(cats, blank) == NULL) {
       perror("Do not include this category.");
@@ -238,7 +234,7 @@ char * judgeBlank(char * blank,
   }
   return dest;
 }
-
+//use notInclude when checking,return the first word.
 char * notInclude(catarray_t * cats, char * blank) {
   for (size_t i = 0; i < cats->n; i++) {
     if (!strcmp(blank, cats->arr[i].name) && cats->arr[i].n_words > 0) {
