@@ -1,6 +1,6 @@
-Grading at 10/20/2021:01:00:13.583983
-For commit ID 83dc027cbaa72ad4741682a932d5545c5ac2d294
-Grading at Tue Oct 19 21:00:03 EDT 2021
+Grading at 10/20/2021:01:14:16.511587
+For commit ID b4cc13cc595ad840bcd772bfa0eccb73ca8d9e1e
+Grading at Tue Oct 19 21:14:06 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -11,9 +11,7 @@ gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt err_story2.txt
-Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary cave and met a walrus.
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 
 Compiling story-step4
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -65,10 +63,12 @@ gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt story2.txt
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt err_story3.txt
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected output
 
 Compiling story-step4
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -78,7 +78,8 @@ gcc -o story-step4 story-step4.o rand_story.o provided.o
 rm story-step4.o
 +-----------------------------------------------------------------------+
 Test case story-step4 words.txt story2.txt
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected output
 
 Compiling story-step3
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -88,7 +89,9 @@ gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
 Test case story-step3 errrr_words.txt err_story1.txt
-Your file matched the expected output
+Line_1_did_not_match
+Line_2_did_not_match
+Your file did not match the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
