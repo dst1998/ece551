@@ -1,6 +1,6 @@
-Grading at 10/20/2021:03:20:38.292916
-For commit ID 79572cfd68d7e56d2c428de38f8659bec10cad64
-Grading at Tue Oct 19 23:20:28 EDT 2021
+Grading at 10/20/2021:03:37:47.569585
+For commit ID fff24f0d3aef3029cb1efa5da567142c24b0e2e5
+Grading at Tue Oct 19 23:37:37 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -23,7 +23,7 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
 gcc -o story-step4 story-step4.o rand_story.o provided.o
 rm story-step4.o
 +-----------------------------------------------------------------------+
-Test case story-step4 -n words.txt story2.txt
+Test case story-step4 -n words.txt story3.txt
 Your program successfully indicated a failure case
 
 Compiling story-step1
@@ -69,7 +69,8 @@ Test case story-step3 words.txt story2.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt err_story3.txt
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected output
 
 Compiling story-step4
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -80,8 +81,11 @@ rm story-step4.o
 +-----------------------------------------------------------------------+
 Test case story-step4 words.txt story2.txt
 Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step4 -n words.txt story2.txt
+Your file matched the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
