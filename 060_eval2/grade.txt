@@ -1,6 +1,6 @@
-Grading at 10/20/2021:01:17:33.382736
-For commit ID de9907c26a87fe9dee21b3d700737fe1a459b725
-Grading at Tue Oct 19 21:17:23 EDT 2021
+Grading at 10/20/2021:02:24:10.277587
+For commit ID f86ac3561a5a94285e82f8e2910fdc89f1ce0840
+Grading at Tue Oct 19 22:24:00 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -14,9 +14,7 @@ Test case story-step3 words.txt err_story2.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step3 errrr_words.txt err_story1.txt
-Once upon a time, there was a walrus. This scary lived in a very
-peculiar walrus. One day, it left its peaceful walrus and met a scary.
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 
 Compiling story-step4
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -68,12 +66,10 @@ gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt story2.txt
-Line_1_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt err_story3.txt
-Line_1_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 
 Compiling story-step4
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -83,10 +79,9 @@ gcc -o story-step4 story-step4.o rand_story.o provided.o
 rm story-step4.o
 +-----------------------------------------------------------------------+
 Test case story-step4 words.txt story2.txt
-Line_1_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
