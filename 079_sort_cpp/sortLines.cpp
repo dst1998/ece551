@@ -1,20 +1,42 @@
-#include <ifstream>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <algorithm>  //sort
+#include <fstream>
 #include <iostream>
+#include <iterator>
+#include <string>
+#include <vector>
 
 int main(int argc, char ** argv) {
+  std::vector<std::string> vec;
+  std::string str;
   if (argc == 1) {
-    cin.getline();  //
+    while (!std::cin.eof()) {
+      std::getline(std::cin, str);
+      vec.push_back(str);
+    }
   }
   else {
     for (int i = 1; i < argc; i++) {
-      ifstream infile;
-      infile.open(argv[i]);
-      istream & is = NULL;
-      string & str = NULL;
-      while (std::getline(is, str) >= 0) {  //
+      std::ifstream infile(argv[i]);
+      if (infile.fail()) {
+        std::cerr << "Can't open file: " << argv[i] << std::endl;
+        exit(EXIT_FAILURE);
+      }
+      while (!infile.eof()) {
+        std::getline(infile, str);
+        vec.push_back(str);
       }
     }
   }
-  infile.close();
-  return 0;
+  std::sort(vec.begin(), vec.end());
+  std::vector<std::string>::iterator it = vec.begin();
+  while (it != vec.end()) {
+    std::cout << *it << std::endl;
+    ++it;
+  }
+  vec.clear();
+
+  return EXIT_SUCCESS;
 }
