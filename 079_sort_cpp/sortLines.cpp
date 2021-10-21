@@ -19,6 +19,13 @@ int main(int argc, char ** argv) {
       std::getline(std::cin, str);
       vec.push_back(str);
     }
+    std::sort(vec.begin(), vec.end());
+    std::vector<std::string>::iterator it = vec.begin();
+    while (it != vec.end()) {
+      std::cout << *it << std::endl;
+      ++it;
+    }
+    vec.clear();
   }
   else {
     for (int i = 1; i < argc; i++) {
@@ -31,15 +38,15 @@ int main(int argc, char ** argv) {
         std::getline(infile, str);
         vec.push_back(str);
       }
+      std::sort(vec.begin(), vec.end());
+      std::vector<std::string>::iterator it = vec.begin();
+      while (it != vec.end()) {
+        std::cout << *it << std::endl;
+        ++it;
+      }
+      vec.clear();
     }
   }
-  std::sort(vec.begin(), vec.end());
-  std::vector<std::string>::iterator it = vec.begin();
-  while (it != vec.end()) {
-    std::cout << *it << std::endl;
-    ++it;
-  }
-  vec.clear();
 
   return EXIT_SUCCESS;
 }
