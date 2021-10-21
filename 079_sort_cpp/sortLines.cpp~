@@ -1,0 +1,12 @@
+#include <ifstream>
+#include <iostream>
+
+int main(int argc, char ** argv) {
+  if (argc == 1) {
+    cin.getline();  //
+  }
+  else {
+    ifstream infile;
+    infile.open();
+  }
+}
