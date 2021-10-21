@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #include <algorithm>  //sort
+#include <cstdio>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <iterator>
