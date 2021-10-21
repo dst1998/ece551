@@ -11,6 +11,10 @@
 int main(int argc, char ** argv) {
   std::vector<std::string> vec;
   std::string str;
+  if (argv == NULL) {
+    std::cerr << "Wrong number of arguments.\n" << std::endl;
+    exit(EXIT_FAILURE);
+  }
   if (argc == 1) {
     while (!std::cin.eof()) {
       std::getline(std::cin, str);
