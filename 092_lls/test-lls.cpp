@@ -55,11 +55,14 @@ void testAddBack() {
 void testRules() {
   LinkedList<int> il1 = LinkedList<int>();
   LinkedList<int> il3 = il1;
-
+  std::cout << "finish part 111111111" << std::endl;
   il1.addFront(20);
+  std::cout << "finish part 22222222" << std::endl;
   LinkedList<int> il = LinkedList<int>(il1);
+  std::cout << "finish part 23232323232" << std::endl;
   assert(il.head->data == 20 && il.head->next == NULL && il.tail->data == 20 &&
          il.tail->prev == NULL && il.tail == il.head);
+  std::cout << "finish part 33333333" << std::endl;
   il1.addFront(10);
   il = LinkedList<int>(il1);
   assert(il.head->data == 10 && il.head->next->data == 20 && il.tail->prev->data == 10 &&
@@ -99,10 +102,15 @@ void testRemove() {
 
 int main(void) {
   testDefCtor();
+  std::cout << "finish part 1" << std::endl;
   testAddFront();
-  testAddBack();
+  std::cout << "finish part 2" << std::endl;
   testRules();
+  std::cout << "finish part 3" << std::endl;
+  testAddBack();
+  std::cout << "finish part 4" << std::endl;
   testRemove();
+  std::cout << "finish part 5" << std::endl;
   // write calls to your other test methods here
   return EXIT_SUCCESS;
 }

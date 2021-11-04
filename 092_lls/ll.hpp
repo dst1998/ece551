@@ -26,28 +26,33 @@ class LinkedList {
 
  public:
   LinkedList() : head(NULL), tail(NULL), size(0) {}
-  LinkedList(const LinkedList & rhs) : head(NULL), tail(NULL), size(rhs.size) {
+  LinkedList(const LinkedList & rhs) : head(NULL), tail(NULL), size(0) {
+    if (rhs.size == 0) {
+      return;
+    }
     Node * old = rhs.head;
     head = new Node(old->data, NULL, NULL);
     Node * curr = head;
-    for (int i = 1; i < size; i++) {
-      curr->next = new Node(old->next->data, curr, NULL);
+    old = old->next;
+    while (old != NULL) {
+      curr->next = new Node(old->data, curr, NULL);
       curr = curr->next;
       old = old->next;
     }
+    tail = curr;
     size = rhs.size;
   }
   LinkedList & operator=(const LinkedList & rhs) {
-    LinkedList temp(rhs);
-    Node * curr = head;
-    while (curr != NULL) {
-      head = curr->next;
-      delete curr;
-      curr = head;
+    if (this != &rhs) {
+      LinkedList temp(rhs);
+      Node * tem = head;
+      head = temp.head;
+      temp.head = tem;
+      tem = tail;
+      tail = temp.tail;
+      temp.tail = tem;
+      size = temp.size;
     }
-    head = temp.head;
-    tail = temp.tail;
-    size = temp.size;
     return *this;
   }
   ~LinkedList() {
@@ -158,7 +163,7 @@ class LinkedList {
   friend void testAddFront(void);
   friend void testAddBack(void);
   friend void testRemove(void);
-  friend void testRueles(void);
+  friend void testRules(void);
 };
 
 #endif

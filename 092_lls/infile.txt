@@ -1,4 +1,4 @@
-wo ai zhu zhu, zhu zhu ai wo
-dst shi zhu
-zhu shi lpf
-wo ai dst
+For this problem, you will be making a templated
+linked list class.
+This list will be doubly linked.
+
