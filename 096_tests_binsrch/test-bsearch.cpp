@@ -38,10 +38,6 @@ class linearFunction : public Function<int, int> {
   virtual int invoke(int arg) { return arg - 10; }
 };
 
-class linear1Function : public Function<int, int> {
- public:
-  virtual int invoke(int arg) { return arg - 10; }
-};
 void check(Function<int, int> * f,
            int low,
            int high,
