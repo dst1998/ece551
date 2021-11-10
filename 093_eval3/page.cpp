@@ -109,7 +109,7 @@ std::string Page::RewriteChoice(std::string str, size_t i) {
     //if blank or letter exits in the num???????????????????
     //////////////////////////////////////////////////////
     std::stringstream ssout;
-    ssout << i + 1 << ". " << str.substr(pos + 1);
+    ssout << "" << i + 1 << ". " << str.substr(pos + 1);
     return ssout.str();
   }
 }
