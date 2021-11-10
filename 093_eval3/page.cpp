@@ -82,11 +82,15 @@ std::string Page::RewriteChoice(std::string str, size_t i) {
   }
   else {
     //substr(a,b):index a included, index b not included.
+    if (str.substr(0, pos)[0] == '0') {
+      std::cerr << "Not a valid integer!" << std::endl;
+      exit(EXIT_FAILURE);
+    }
     int index;
     std::stringstream ssnum;
     /*std::cout
         << str.substr(0, pos)
-        << std::endl; */ ////////////////////////////////////////////////////////////////
+        << std::endl; */ ////////////////////////////////////////////////
     ssnum << str.substr(0, pos);  //put string into sstream
     ssnum >> index;
     /*std::cout << "index=" << index
