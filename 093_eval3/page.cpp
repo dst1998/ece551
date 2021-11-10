@@ -84,13 +84,13 @@ std::string Page::RewriteChoice(std::string str, size_t i) {
     //substr(a,b):index a included, index b not included.
     int index;
     std::stringstream ssnum;
-    std::cout
+    /*std::cout
         << str.substr(0, pos)
-        << std::endl;  ////////////////////////////////////////////////////////////////
+        << std::endl; */ ////////////////////////////////////////////////////////////////
     ssnum << str.substr(0, pos);  //put string into sstream
     ssnum >> index;
-    std::cout << "index=" << index
-              << std::endl;  //////////////////////////////////////////////////
+    /*std::cout << "index=" << index
+      << std::endl; */ //////////////////////////////////////////////////
     //if what before ":"change turn into a int, exit.
     /*if (!ssnum.good()) {
       ssnum.clear();
