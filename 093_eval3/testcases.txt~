@@ -1,0 +1,34 @@
+#error
+cyoa-step1 invalid.txt
+cyoa-step1 story1/page15.txt
+
+
+#success
+cyoa-step1 story1/page1.txt
+cyoa-step1 story1/page2.txt
+cyoa-step1 story1/page3.txt
+cyoa-step1 story1/page4.txt
+cyoa-step1 story1/page5.txt
+cyoa-step1 story1/page6.txt
+cyoa-step1 story1/page7.txt
+cyoa-step1 story1/page8.txt
+cyoa-step1 story1/page9.txt
+cyoa-step1 story1/page10.txt
+cyoa-step1 story1/page11.txt
+cyoa-step1 story1/page12.tx
+cyoa-step1 story1/page13.txt
+cyoa-step1 story1/page14.txt
+cyoa-step2 story2/page1.txt
+cyoa-step2 story2/page2.txt
+cyoa-step2 story2/page3.txt
+cyoa-step2 story2/page4.txt
+cyoa-step2 story2/page5.txt
+cyoa-step2 story2/page6.txt
+cyoa-step2 story2/page7.txt
+cyoa-step2 story2/page8.txt
+cyoa-step2 story2/page9.txt
+cyoa-step2 story2/page10.txt
+cyoa-step2 story2/page11.txt
+cyoa-step2 story2/page12.txt
+
+
