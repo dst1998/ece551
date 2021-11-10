@@ -1,0 +1,25 @@
+#include <fstream>
+#include <string>
+#include <vector>
+class Page {
+ private:
+  size_t choiceNum;
+
+ public:
+  Page();
+  Page(size_t cn);
+  //Read input file into a vector
+  std::vector<std::string> ReadIn(const char * filename);
+  //Parsing the text before and behind '#'
+  void ParsePage(std::vector<std::string> vec);
+  //Refomat the choice line.
+  std ::string RewriteChoice(std::string str, size_t i);
+  //print the text of the page.
+  void TextPrint(std::vector<std::string> & vecText);
+  //print if win
+  void WinPrint();
+  //print if lose
+  void LosePrint();
+  //print choices
+  void ChoicesPrint(std::vector<std::string> & vecChoices);
+};
