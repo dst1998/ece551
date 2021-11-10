@@ -17,7 +17,7 @@ cyoa-step1 story1/page8.txt
 cyoa-step1 story1/page9.txt
 cyoa-step1 story1/page10.txt
 cyoa-step1 story1/page11.txt
-cyoa-step1 story1/page12.tx
+cyoa-step1 story1/page12.txt
 cyoa-step1 story1/page13.txt
 cyoa-step1 story1/page14.txt
 cyoa-step2 story2/page1.txt

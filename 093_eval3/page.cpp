@@ -129,8 +129,7 @@ void Page::LosePrint() {
 }
 //print choices
 void Page::ChoicesPrint() {
-  std::cout << "\n"
-            << "What would you like to do?\n"
+  std::cout << "What would you like to do?\n"
             << "\n";
   for (size_t i = 0; i < vecChoices.size(); i++) {
     std::cout << vecChoices[i] << std::endl;
