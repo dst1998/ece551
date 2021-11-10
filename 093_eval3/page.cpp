@@ -144,7 +144,7 @@ void Page::ReadOnePage(const char * filename) {
     WinPrint();
   }
   //if no choices,and first line is LOSE
-  if (lose == true) {
+  else if (lose == true) {
     LosePrint();
   }
   //else:have choices in the page
