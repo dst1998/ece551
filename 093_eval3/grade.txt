@@ -1,6 +1,6 @@
-Grading at 11/10/2021:21:27:01.548082
-For commit ID 0df09cd65441e32babd120f75cbe98f906b65291
-Grading at Wed Nov 10 16:26:36 EST 2021
+Grading at 11/10/2021:21:46:27.010409
+For commit ID eb9802c1220184439737450641f6a778cb43fc19
+Grading at Wed Nov 10 16:45:59 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -133,7 +133,21 @@ Test case 2 (error): cyoa-step1 story1/page15.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 3 (error): cyoa-step1 invalid1.txt
-test begin
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 4 (error): cyoa-step1 invalid2.txt
+test starts
+testend
+
+
+What would you like to do?
+
+1.  c1
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
++-----------------------------------------------------------------------+
+Test case 5 (error): cyoa-step1 invalid3.txt
+test start
 test end
 
 
@@ -143,7 +157,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 4 (success): cyoa-step1 story1/page1.txt
+Test case 6 (success): cyoa-step1 story1/page1.txt
 20d19
 < 
 23,25c22,24
@@ -156,7 +170,7 @@ Test case 4 (success): cyoa-step1 story1/page1.txt
 >  3. Choose the magic toaster.
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case 5 (success): cyoa-step1 story1/page2.txt
+Test case 7 (success): cyoa-step1 story1/page2.txt
 20d19
 < 
 23,25c22,24
@@ -169,7 +183,7 @@ Test case 5 (success): cyoa-step1 story1/page2.txt
 >  3. Go alone.
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case 6 (success): cyoa-step1 story1/page3.txt
+Test case 8 (success): cyoa-step1 story1/page3.txt
 20d19
 < 
 23,25c22,24
@@ -182,7 +196,7 @@ Test case 6 (success): cyoa-step1 story1/page3.txt
 >  3. Go alone.
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case 7 (success): cyoa-step1 story1/page4.txt
+Test case 9 (success): cyoa-step1 story1/page4.txt
 24d23
 < 
 27,29c26,28
@@ -195,7 +209,7 @@ Test case 7 (success): cyoa-step1 story1/page4.txt
 >  3. Go alone.
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case 8 (success): cyoa-step1 story1/page5.txt
+Test case 10 (success): cyoa-step1 story1/page5.txt
 16d15
 < 
 19,21c18,20
@@ -208,39 +222,39 @@ Test case 8 (success): cyoa-step1 story1/page5.txt
 >  3. Bohemian Rhapsody, accompanied by the magestic call of a bald eagle
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case 9 (success): cyoa-step1 story1/page6.txt
+Test case 11 (success): cyoa-step1 story1/page6.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 10 (success): cyoa-step1 story1/page7.txt
+Test case 12 (success): cyoa-step1 story1/page7.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 11 (success): cyoa-step1 story1/page8.txt
+Test case 13 (success): cyoa-step1 story1/page8.txt
 28,30d27
 < 
 < What would you like to do?
 < 
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case 12 (success): cyoa-step1 story1/page9.txt
+Test case 14 (success): cyoa-step1 story1/page9.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): cyoa-step1 story1/page10.txt
+Test case 15 (success): cyoa-step1 story1/page10.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 14 (success): cyoa-step1 story1/page11.txt
+Test case 16 (success): cyoa-step1 story1/page11.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 15 (success): cyoa-step1 story1/page12.tx
+Test case 17 (success): cyoa-step1 story1/page12.tx
 We considered this an error case and gave the following message:
 After page number, expected .txt but found .tx
 1d0
 < Can't open file: story1/page12.tx
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case 16 (success): cyoa-step1 story1/page13.txt
+Test case 18 (success): cyoa-step1 story1/page13.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 17 (success): cyoa-step1 story1/page14.txt
+Test case 19 (success): cyoa-step1 story1/page14.txt
 Your file matched the expected output
 
 Compiling cyoa-step2
