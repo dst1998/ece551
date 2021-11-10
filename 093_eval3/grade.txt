@@ -1,6 +1,6 @@
-Grading at 11/10/2021:21:23:57.648174
-For commit ID b6e6912fe57a76d89391029a4f93ff3f3dd3da00
-Grading at Wed Nov 10 16:23:31 EST 2021
+Grading at 11/10/2021:21:27:01.548082
+For commit ID 0df09cd65441e32babd120f75cbe98f906b65291
+Grading at Wed Nov 10 16:26:36 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -8,16 +8,9 @@ make: 'cyoa-step1' is up to date.
 Compiled for step 1
 +-----------------------------------------------------------------------+
 Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
-1,6d0
-< 2
-< index=2
-< 3
-< index=3
-< 4
-< index=4
-26d19
+20d19
 < 
-29,31c22,24
+23,25c22,24
 < 1. Choose the magic whistle.
 < 2. Choose the magic shoes.
 < 3. Choose the magic toaster.
@@ -28,16 +21,9 @@ Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 2 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page2.txt
-1,6d0
-< 5
-< index=5
-< 6
-< index=6
-< 7
-< index=7
-26d19
+20d19
 < 
-29,31c22,24
+23,25c22,24
 < 1. Go to Denevieve for help.
 < 2. Go to Grew for help.
 < 3. Go alone.
@@ -48,16 +34,9 @@ Test case 2 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page2.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 3 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page3.txt
-1,6d0
-< 8
-< index=8
-< 9
-< index=9
-< 7
-< index=7
-26d19
+20d19
 < 
-29,31c22,24
+23,25c22,24
 < 1. Go to Denevieve for help.
 < 2. Go to Grew for help.
 < 3. Go alone.
@@ -68,16 +47,9 @@ Test case 3 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page3.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 4 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page4.txt
-1,6d0
-< 11
-< index=11
-< 12
-< index=12
-< 7
-< index=7
-30d23
+24d23
 < 
-33,35c26,28
+27,29c26,28
 < 1. Go to Denevieve for help.
 < 2. Go to Grew for help.
 < 3. Go alone.
@@ -88,16 +60,9 @@ Test case 4 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page4.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 5 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page5.txt
-1,6d0
-< 14
-< index=14
-< 13
-< index=13
-< 10
-< index=10
-22d15
+16d15
 < 
-25,27c18,20
+19,21c18,20
 < 1. Silent Night, accompanied by raven calls
 < 2. Angels We Have Heard on High, accompanied by roosters crowing
 < 3. Bohemian Rhapsody, accompanied by the magestic call of a bald eagle
@@ -108,16 +73,9 @@ Test case 5 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page5.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 6 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page1.txt
-1,6d0
-< 2
-< index=2
-< 3
-< index=3
-< 4
-< index=4
-17d10
+11d10
 < 
-20,22c13,15
+14,16c13,15
 < 1. Try to sneak past the sleeping dragon
 < 2. Leave the dragon's cave and go home
 < 3. Stab the dragon in the neck
@@ -128,14 +86,9 @@ Test case 6 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page1.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 7 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page2.txt
-1,4d0
-< 5
-< index=5
-< 6
-< index=6
-10d5
+6d5
 < 
-13,14c8,9
+9,10c8,9
 < 1. Pick up the ruby
 < 2. Pass the ruby to explore the rest of the hoard
 ---
@@ -174,16 +127,12 @@ Compiling cyoa-step1
 make: 'cyoa-step1' is up to date.
 +-----------------------------------------------------------------------+
 Test case 1 (error): cyoa-step1 invalid.txt
--1
-index=-1
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 2 (error): cyoa-step1 story1/page15.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 3 (error): cyoa-step1 invalid1.txt
-034
-index=34
 test begin
 test end
 
@@ -195,16 +144,9 @@ You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
 Test case 4 (success): cyoa-step1 story1/page1.txt
-1,6d0
-< 2
-< index=2
-< 3
-< index=3
-< 4
-< index=4
-26d19
+20d19
 < 
-29,31c22,24
+23,25c22,24
 < 1. Choose the magic whistle.
 < 2. Choose the magic shoes.
 < 3. Choose the magic toaster.
@@ -215,16 +157,9 @@ Test case 4 (success): cyoa-step1 story1/page1.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 5 (success): cyoa-step1 story1/page2.txt
-1,6d0
-< 5
-< index=5
-< 6
-< index=6
-< 7
-< index=7
-26d19
+20d19
 < 
-29,31c22,24
+23,25c22,24
 < 1. Go to Denevieve for help.
 < 2. Go to Grew for help.
 < 3. Go alone.
@@ -235,16 +170,9 @@ Test case 5 (success): cyoa-step1 story1/page2.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 6 (success): cyoa-step1 story1/page3.txt
-1,6d0
-< 8
-< index=8
-< 9
-< index=9
-< 7
-< index=7
-26d19
+20d19
 < 
-29,31c22,24
+23,25c22,24
 < 1. Go to Denevieve for help.
 < 2. Go to Grew for help.
 < 3. Go alone.
@@ -255,16 +183,9 @@ Test case 6 (success): cyoa-step1 story1/page3.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 7 (success): cyoa-step1 story1/page4.txt
-1,6d0
-< 11
-< index=11
-< 12
-< index=12
-< 7
-< index=7
-30d23
+24d23
 < 
-33,35c26,28
+27,29c26,28
 < 1. Go to Denevieve for help.
 < 2. Go to Grew for help.
 < 3. Go alone.
@@ -275,16 +196,9 @@ Test case 7 (success): cyoa-step1 story1/page4.txt
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 8 (success): cyoa-step1 story1/page5.txt
-1,6d0
-< 14
-< index=14
-< 13
-< index=13
-< 10
-< index=10
-22d15
+16d15
 < 
-25,27c18,20
+19,21c18,20
 < 1. Silent Night, accompanied by raven calls
 < 2. Angels We Have Heard on High, accompanied by roosters crowing
 < 3. Bohemian Rhapsody, accompanied by the magestic call of a bald eagle
