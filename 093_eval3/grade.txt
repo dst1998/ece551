@@ -1,6 +1,6 @@
-Grading at 11/10/2021:21:55:56.819873
-For commit ID 5ef184d52ee0b5513a708f291887b72eeddaa627
-Grading at Wed Nov 10 16:55:29 EST 2021
+Grading at 11/10/2021:22:04:55.097737
+For commit ID e3648de11e0018ef44df19e6806b18c5e11bf608
+Grading at Wed Nov 10 17:04:27 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -8,43 +8,28 @@ make: 'cyoa-step1' is up to date.
 Compiled for step 1
 +-----------------------------------------------------------------------+
 Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
-20d19
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 2 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page2.txt
-20d19
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 3 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page3.txt
-20d19
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 4 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page4.txt
-24d23
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 5 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page5.txt
-16d15
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 6 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page1.txt
-11d10
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 7 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page2.txt
-6d5
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 8 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page3.txt
-5,7d4
-< 
+5,6d4
 < What would you like to do?
 < 
 Your file did not match the expected output
@@ -85,7 +70,6 @@ Test case 4 (error): cyoa-step1 invalid2.txt
 test starts
 testend
 
-
 What would you like to do?
 
  1.  c1
@@ -96,7 +80,6 @@ Test case 5 (error): cyoa-step1 invalid3.txt
 test start
 test end
 
-
 What would you like to do?
 
  1. c1
@@ -104,29 +87,19 @@ You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
 Test case 6 (success): cyoa-step1 story1/page1.txt
-20d19
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 7 (success): cyoa-step1 story1/page2.txt
-20d19
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 8 (success): cyoa-step1 story1/page3.txt
-20d19
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 9 (success): cyoa-step1 story1/page4.txt
-24d23
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 10 (success): cyoa-step1 story1/page5.txt
-16d15
-< 
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 11 (success): cyoa-step1 story1/page6.txt
 Your file matched the expected output
@@ -135,8 +108,7 @@ Test case 12 (success): cyoa-step1 story1/page7.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 13 (success): cyoa-step1 story1/page8.txt
-28,30d27
-< 
+28,29d27
 < What would you like to do?
 < 
 Your file did not match the expected output
@@ -150,11 +122,10 @@ Your file matched the expected output
 Test case 16 (success): cyoa-step1 story1/page11.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 17 (success): cyoa-step1 story1/page12.tx
-We considered this an error case and gave the following message:
-After page number, expected .txt but found .tx
-1d0
-< Can't open file: story1/page12.tx
+Test case 17 (success): cyoa-step1 story1/page12.txt
+24,25d23
+< What would you like to do?
+< 
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 18 (success): cyoa-step1 story1/page13.txt
