@@ -1,6 +1,6 @@
-Grading at 11/11/2021:01:33:58.617884
-For commit ID d0c9940136c4997d51cbd83be687e97d36171ca8
-Grading at Wed Nov 10 20:33:28 EST 2021
+Grading at 11/11/2021:01:42:24.406605
+For commit ID d85d2b0e1f590e6c6a08a513ff98b4ffeb91c92c
+Grading at Wed Nov 10 20:41:54 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -20,30 +20,7 @@ Test case 4 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page4.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 5 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page5.txt
-1c1,20
-< Not a valid integer!
----
-> After thinking about it a bit, you decide that Denevieve is probably a
-> better choice. After all, her singing skills are likely to come in handy,
-> especially with your magic whistle. Maybe dragons can be tamed by choir
-> music and bird calls? That could be right, but you aren't sure--you slept
-> through that day of Magical Creature Biology class. 
-> 
-> After knocking on the door, Denevieve is surprised to hear about the dragon
-> threat but is happy to help you. After all, you were her best student and
-> tested every piece of code extensively and incrementally. Surely you can be
-> trusted with a quest about dragons.
-> 
-> The two of you set off into the hills and find the cave of the dragon. You
-> take a minute to confer about your musical options and come up with a short
-> list of three possible combinations to tame the dragon. 
-> 
-> What would you like to do?
-> 
->  1. Silent Night, accompanied by raven calls
->  2. Angels We Have Heard on High, accompanied by roosters crowing
->  3. Bohemian Rhapsody, accompanied by the magestic call of a bald eagle
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 6 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page1.txt
 Your file matched the expected output
@@ -59,7 +36,7 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 10 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page5.txt
 Your file matched the expected output
-Step 1: Failed test cases as above
+Step 1: PASSED Pre-Grader Test Cases
 
 Compiling cyoa-step2
 The code did not compile!
@@ -114,30 +91,7 @@ Test case 12 (success): cyoa-step1 story1/page4.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 13 (success): cyoa-step1 story1/page5.txt
-1c1,20
-< Not a valid integer!
----
-> After thinking about it a bit, you decide that Denevieve is probably a
-> better choice. After all, her singing skills are likely to come in handy,
-> especially with your magic whistle. Maybe dragons can be tamed by choir
-> music and bird calls? That could be right, but you aren't sure--you slept
-> through that day of Magical Creature Biology class. 
-> 
-> After knocking on the door, Denevieve is surprised to hear about the dragon
-> threat but is happy to help you. After all, you were her best student and
-> tested every piece of code extensively and incrementally. Surely you can be
-> trusted with a quest about dragons.
-> 
-> The two of you set off into the hills and find the cave of the dragon. You
-> take a minute to confer about your musical options and come up with a short
-> list of three possible combinations to tame the dragon. 
-> 
-> What would you like to do?
-> 
->  1. Silent Night, accompanied by raven calls
->  2. Angels We Have Heard on High, accompanied by roosters crowing
->  3. Bohemian Rhapsody, accompanied by the magestic call of a bald eagle
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 14 (success): cyoa-step1 story1/page6.txt
 Your file matched the expected output
