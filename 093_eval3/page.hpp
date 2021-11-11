@@ -12,7 +12,6 @@ class Page {
 
  public:
   Page();
-  Page(size_t cn);
   ~Page();
   //Read input file into a vector
   void ReadIn(const char * filename);

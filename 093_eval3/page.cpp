@@ -10,8 +10,7 @@
 
 Page::Page() : choiceNum(0), win(false), lose(false) {
 }
-Page::Page(size_t cn) : choiceNum(cn), win(false), lose(false) {
-}
+
 Page::~Page() {
 }
 //Read input file into a vector
