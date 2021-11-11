@@ -5,7 +5,7 @@
 
 #include "set.h"
 
-template<typename K, typename V>
+template<typename K>
 class BstSet : public Set<K> {
  private:
   class Node {
