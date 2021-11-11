@@ -1,6 +1,6 @@
-Grading at 11/11/2021:01:42:24.406605
-For commit ID d85d2b0e1f590e6c6a08a513ff98b4ffeb91c92c
-Grading at Wed Nov 10 20:41:54 EST 2021
+Grading at 11/11/2021:01:47:07.523760
+For commit ID 375534afb367e38799f323e1507d2cfaf68dbbd7
+Grading at Wed Nov 10 20:46:39 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -78,49 +78,43 @@ Your program successfully indicated a failure case
 Test case 8 (error): cyoa-step1 invalid6.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 9 (success): cyoa-step1 story1/page1.txt
+Test case 9 (success): cyoa-step1 story2/page1.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 10 (success): cyoa-step1 story1/page2.txt
+Test case 10 (success): cyoa-step1 story2/page2.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 11 (success): cyoa-step1 story1/page3.txt
+Test case 11 (success): cyoa-step1 story2/page3.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 12 (success): cyoa-step1 story1/page4.txt
+Test case 12 (success): cyoa-step1 story2/page4.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): cyoa-step1 story1/page5.txt
+Test case 13 (success): cyoa-step1 story2/page5.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 14 (success): cyoa-step1 story1/page6.txt
+Test case 14 (success): cyoa-step1 story2/page6.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 15 (success): cyoa-step1 story1/page7.txt
+Test case 15 (success): cyoa-step1 story2/page7.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 16 (success): cyoa-step1 story1/page8.txt
+Test case 16 (success): cyoa-step1 story2/page8.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 17 (success): cyoa-step1 story1/page9.txt
+Test case 17 (success): cyoa-step1 story2/page9.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 18 (success): cyoa-step1 story1/page10.txt
+Test case 18 (success): cyoa-step1 story2/page10.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 19 (success): cyoa-step1 story1/page11.txt
+Test case 19 (success): cyoa-step1 story2/page11.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 20 (success): cyoa-step1 story1/page12.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 21 (success): cyoa-step1 story1/page13.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 22 (success): cyoa-step1 story1/page14.txt
+Test case 20 (success): cyoa-step1 story2/page12.txt
 Your file matched the expected output
 
-Compiling cyoa-step2
-The code did not compile!
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
