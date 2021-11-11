@@ -1,29 +1,122 @@
-Grading at 11/11/2021:21:21:33.683277
-For commit ID 9b682d611f6a51b9b7b2bdb58e03cc8e0922b56c
-Grading at Thu Nov 11 16:21:33 EST 2021
+Grading at 11/11/2021:21:23:37.898584
+For commit ID 4c14ff46624affbc7ddac909e58b2b295a5ab155
+Grading at Thu Nov 11 16:23:37 EST 2021
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
- #include "bstset.h"
-          ^~~~~~~~~~
-compilation terminated.
+90-tester.cpp:54:23: error: wrong number of template arguments (1, should be 2)
+ typedef BstSet<KEYTYPE> BSTSetTy;
+                       ^
+In file included from 90-tester.cpp:1:0:
+bstset.h:9:7: note: provided for ‘template<class K, class V> class BstSet’
+ class BstSet : public Set<K> {
+       ^~~~~~
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:71:15: error: cannot convert ‘BSTSetTy* {aka int*}’ to ‘SetTy* {aka Set<int>*}’ in initialization
+   SetTy * m = bmt;
+               ^~~
+90-tester.cpp:96:40: error: conditional expression between distinct pointer types ‘SetTy* {aka Set<int>*}’ and ‘BSTSetTy* {aka int*}’ lacks a cast [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                                        ^~
+90-tester.cpp:96:34: error: invalid conversion from ‘void*’ to ‘SetTy* {aka Set<int>*}’ [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                    ~~~~~~~~~~~~~~^~~~~~~~
+90-tester.cpp:113:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
+90-tester.cpp:125:40: error: conditional expression between distinct pointer types ‘SetTy* {aka Set<int>*}’ and ‘BSTSetTy* {aka int*}’ lacks a cast [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                                        ^~
+90-tester.cpp:125:34: error: invalid conversion from ‘void*’ to ‘SetTy* {aka Set<int>*}’ [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                    ~~~~~~~~~~~~~~^~~~~~~~
+90-tester.cpp:140:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
+90-tester.cpp:151:26: error: cannot convert ‘BSTSetTy* {aka int*}’ to ‘SetTy* {aka Set<int>*}’ in assignment
+   m = bmt = new BSTSetTy();
+                          ^
+90-tester.cpp:164:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
-90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
- #include "bstset.h"
-          ^~~~~~~~~~
-compilation terminated.
+90-tester.cpp:54:23: error: wrong number of template arguments (1, should be 2)
+ typedef BstSet<KEYTYPE> BSTSetTy;
+                       ^
+In file included from 90-tester.cpp:1:0:
+bstset.h:9:7: note: provided for ‘template<class K, class V> class BstSet’
+ class BstSet : public Set<K> {
+       ^~~~~~
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:71:15: error: cannot convert ‘BSTSetTy* {aka int*}’ to ‘SetTy* {aka Set<std::__cxx11::basic_string<char> >*}’ in initialization
+   SetTy * m = bmt;
+               ^~~
+90-tester.cpp:96:40: error: conditional expression between distinct pointer types ‘SetTy* {aka Set<std::__cxx11::basic_string<char> >*}’ and ‘BSTSetTy* {aka int*}’ lacks a cast [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                                        ^~
+90-tester.cpp:96:34: error: invalid conversion from ‘void*’ to ‘SetTy* {aka Set<std::__cxx11::basic_string<char> >*}’ [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                    ~~~~~~~~~~~~~~^~~~~~~~
+90-tester.cpp:113:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
+90-tester.cpp:125:40: error: conditional expression between distinct pointer types ‘SetTy* {aka Set<std::__cxx11::basic_string<char> >*}’ and ‘BSTSetTy* {aka int*}’ lacks a cast [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                                        ^~
+90-tester.cpp:125:34: error: invalid conversion from ‘void*’ to ‘SetTy* {aka Set<std::__cxx11::basic_string<char> >*}’ [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                    ~~~~~~~~~~~~~~^~~~~~~~
+90-tester.cpp:140:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
+90-tester.cpp:151:26: error: cannot convert ‘BSTSetTy* {aka int*}’ to ‘SetTy* {aka Set<std::__cxx11::basic_string<char> >*}’ in assignment
+   m = bmt = new BSTSetTy();
+                          ^
+90-tester.cpp:164:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
-90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
- #include "bstset.h"
-          ^~~~~~~~~~
-compilation terminated.
+90-tester.cpp:54:23: error: wrong number of template arguments (1, should be 2)
+ typedef BstSet<KEYTYPE> BSTSetTy;
+                       ^
+In file included from 90-tester.cpp:1:0:
+bstset.h:9:7: note: provided for ‘template<class K, class V> class BstSet’
+ class BstSet : public Set<K> {
+       ^~~~~~
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:71:15: error: cannot convert ‘BSTSetTy* {aka int*}’ to ‘SetTy* {aka Set<Tester>*}’ in initialization
+   SetTy * m = bmt;
+               ^~~
+90-tester.cpp:96:40: error: conditional expression between distinct pointer types ‘SetTy* {aka Set<Tester>*}’ and ‘BSTSetTy* {aka int*}’ lacks a cast [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                                        ^~
+90-tester.cpp:96:34: error: invalid conversion from ‘void*’ to ‘SetTy* {aka Set<Tester>*}’ [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                    ~~~~~~~~~~~~~~^~~~~~~~
+90-tester.cpp:113:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
+90-tester.cpp:125:40: error: conditional expression between distinct pointer types ‘SetTy* {aka Set<Tester>*}’ and ‘BSTSetTy* {aka int*}’ lacks a cast [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                                        ^~
+90-tester.cpp:125:34: error: invalid conversion from ‘void*’ to ‘SetTy* {aka Set<Tester>*}’ [-fpermissive]
+       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+                    ~~~~~~~~~~~~~~^~~~~~~~
+90-tester.cpp:140:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
+90-tester.cpp:151:26: error: cannot convert ‘BSTSetTy* {aka int*}’ to ‘SetTy* {aka Set<Tester>*}’ in assignment
+   m = bmt = new BSTSetTy();
+                          ^
+90-tester.cpp:164:18: error: request for member ‘contains’ in ‘* m2’, which is of non-class type ‘BSTSetTy {aka int}’
+  VALTYPE v = m2->contains(k);
+                  ^~~~~~~~
 The code did not compile.  This test failed.
 
 Overall Grade: F
