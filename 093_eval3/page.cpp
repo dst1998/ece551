@@ -92,7 +92,7 @@ std::string Page::RewriteChoice(std::string str, size_t i) {
     exit(EXIT_FAILURE);
   }
   for (size_t j = 0; j < pos; j++) {
-    if (str[j] < '1' || str[j] > '9' || str[0] == '0') {
+    if (str[j] < '0' || str[j] > '9' || str[0] == '0') {
       std::cerr << "Not a valid integer!" << std::endl;
       exit(EXIT_FAILURE);
     }
