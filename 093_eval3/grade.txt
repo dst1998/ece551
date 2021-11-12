@@ -1,6 +1,6 @@
-Grading at 11/12/2021:21:41:08.078771
-For commit ID f7547244870aa46225ff137e6acd31f1d4de81eb
-Grading at Fri Nov 12 16:40:39 EST 2021
+Grading at 11/12/2021:21:51:10.742212
+For commit ID d34c10b8eac45074573278a6884c83fd9fadadc7
+Grading at Fri Nov 12 16:50:40 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -101,41 +101,62 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 10 (success): cyoa-step1 story2/page1.txt
+Test case 10 (error): cyoa-step1 invalid8.txt
+test
+
+What would you like to do?
+
+ 1. abc abc ?
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
++-----------------------------------------------------------------------+
+Test case 11 (error): cyoa-step1 invalid9.txt
+test
+
+What would you like to do?
+
+ 1. abc abc?
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
++-----------------------------------------------------------------------+
+Test case 12 (error): cyoa-step1 invalid10.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 13 (success): cyoa-step1 story2/page1.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 11 (success): cyoa-step1 story2/page2.txt
+Test case 14 (success): cyoa-step1 story2/page2.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 12 (success): cyoa-step1 story2/page3.txt
+Test case 15 (success): cyoa-step1 story2/page3.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): cyoa-step1 story2/page4.txt
+Test case 16 (success): cyoa-step1 story2/page4.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 14 (success): cyoa-step1 story2/page5.txt
+Test case 17 (success): cyoa-step1 story2/page5.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 15 (success): cyoa-step1 story2/page6.txt
+Test case 18 (success): cyoa-step1 story2/page6.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 16 (success): cyoa-step1 story2/page7.txt
+Test case 19 (success): cyoa-step1 story2/page7.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 17 (success): cyoa-step1 story2/page8.txt
+Test case 20 (success): cyoa-step1 story2/page8.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 18 (success): cyoa-step1 story2/page9.txt
+Test case 21 (success): cyoa-step1 story2/page9.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 19 (success): cyoa-step1 story2/page10.txt
+Test case 22 (success): cyoa-step1 story2/page10.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 20 (success): cyoa-step1 story2/page11.txt
+Test case 23 (success): cyoa-step1 story2/page11.txt
 Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 21 (success): cyoa-step1 story2/page12.txt
-Your file matched the expected output
+
+Grading has taken more than 20 seconds
+Skipping remaining test cases
 
 You have FAILED one or more of your test cases
 Keep debugging
