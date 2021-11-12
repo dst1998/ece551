@@ -1,6 +1,6 @@
-Grading at 11/12/2021:22:23:35.595018
-For commit ID 0dcaf18137d00780584b102fd6a72ccb097139fe
-Grading at Fri Nov 12 17:23:04 EST 2021
+Grading at 11/12/2021:22:30:26.622449
+For commit ID 0fdb18da80ff7162505c4a569057b0b944f54d15
+Grading at Fri Nov 12 17:29:55 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -60,69 +60,7 @@ Your program successfully indicated a failure case
 Test case 2 (error): cyoa-step1 story1/page15.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 3 (error): cyoa-step1 invalid1.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 4 (error): cyoa-step1 invalid2.txt
-test starts
-testend
-
-What would you like to do?
-
- 1. sdaafsdf: c1
-You listed this in #errors, and we agree that it is an error case.
-However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
-+-----------------------------------------------------------------------+
-Test case 5 (error): cyoa-step1 invalid3.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 6 (error): cyoa-step1 invalid4.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 7 (error): cyoa-step1 invalid5.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 8 (error): cyoa-step1 invalid6.txt
-
-test start
-test end
-
-Congratulations! You have won. Hooray!
-You listed this in #errors, and we agree that it is an error case.
-However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
-+-----------------------------------------------------------------------+
-Test case 9 (error): cyoa-step1 invalid7.txt
-test start
-test end
-
-What would you like to do?
-
- 1.    c1
-You listed this in #errors, and we agree that it is an error case.
-However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
-+-----------------------------------------------------------------------+
-Test case 10 (error): cyoa-step1 invalid8.txt
-test
-
-What would you like to do?
-
- 1. abc abc ?
-You listed this in #errors, and we agree that it is an error case.
-However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
-+-----------------------------------------------------------------------+
-Test case 11 (error): cyoa-step1 invalid9.txt
-test
-
-What would you like to do?
-
- 1. abc abc?
-You listed this in #errors, and we agree that it is an error case.
-However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
-+-----------------------------------------------------------------------+
-Test case 12 (error): cyoa-step1 invalid10.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 13 (error): cyoa-step1 invalid11.txt
+Test case 3 (error): cyoa-step1 invalid11.txt
 test1
 test2
 
@@ -132,7 +70,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 14 (error): cyoa-step1 invalid12.txt
+Test case 4 (error): cyoa-step1 invalid12.txt
 test1
 test2
 
@@ -142,7 +80,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 15 (error): cyoa-step1 invalid13.txt
+Test case 5 (error): cyoa-step1 invalid13.txt
 test1
 test2
 
@@ -152,7 +90,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 16 (error): cyoa-step1 invalid14.txt
+Test case 6 (error): cyoa-step1 invalid14.txt
 test1
 test2
 
@@ -162,7 +100,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 17 (error): cyoa-step1 invalid15.txt
+Test case 7 (error): cyoa-step1 invalid15.txt
 test1
 test2
 
@@ -172,7 +110,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 18 (error): cyoa-step1 invalid16.txt
+Test case 8 (error): cyoa-step1 invalid16.txt
 test1
 test2
 
@@ -182,7 +120,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 19 (error): cyoa-step1 invalid17.txt
+Test case 9 (error): cyoa-step1 invalid17.txt
 test1
 test2
 
@@ -192,7 +130,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 20 (error): cyoa-step1 invalid18.txt
+Test case 10 (error): cyoa-step1 invalid18.txt
 test1
 test2
 
@@ -202,7 +140,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 21 (error): cyoa-step1 invalid19.txt
+Test case 11 (error): cyoa-step1 invalid19.txt
 test1
 test2
 
@@ -212,7 +150,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 22 (error): cyoa-step1 invalid20.txt
+Test case 12 (error): cyoa-step1 invalid20.txt
 test1
 test2
 
@@ -222,7 +160,7 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 23 (error): cyoa-step1 invalid21.txt
+Test case 13 (error): cyoa-step1 invalid21.txt
 test1
 test2
 
@@ -231,6 +169,50 @@ What would you like to do?
  1. abc a b ab
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
++-----------------------------------------------------------------------+
+Test case 14 (error): cyoa-step1 invalid22.txt
+test1
+test2
+
+What would you like to do?
+
+ 1. abc Haha
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
++-----------------------------------------------------------------------+
+Test case 15 (error): cyoa-step1 invalid23.txt
+test1
+test2
+
+What would you like to do?
+
+ 1. abc Haha Baba Mama
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
++-----------------------------------------------------------------------+
+Test case 16 (success): cyoa-step1 story2/page1.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 17 (success): cyoa-step1 story2/page2.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 18 (success): cyoa-step1 story2/page3.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 19 (success): cyoa-step1 story2/page4.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 20 (success): cyoa-step1 story2/page5.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 21 (success): cyoa-step1 story2/page6.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 22 (success): cyoa-step1 story2/page7.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 23 (success): cyoa-step1 story2/page8.txt
+Your file matched the expected output
 
 Grading has taken more than 20 seconds
 Skipping remaining test cases
