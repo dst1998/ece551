@@ -1,6 +1,6 @@
-Grading at 11/12/2021:22:49:58.884372
-For commit ID 9c22c5da8596eae13d3a539b1d829f1778262ef5
-Grading at Fri Nov 12 17:49:28 EST 2021
+Grading at 11/12/2021:22:53:21.163800
+For commit ID 1c83022e7c56ad27e7ee1632165c4b55df10ffeb
+Grading at Fri Nov 12 17:52:50 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -57,8 +57,8 @@ make: 'cyoa-step1' is up to date.
 Test case 1 (error): cyoa-step1 invalid.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 2 (error): cyoa-step1 story1/page15.txt
-Your program successfully indicated a failure case
+Test case 2 (error): cyoa-step1 story1/page1.txt
+Our cyoa-step1 does not consider this an error case
 +-----------------------------------------------------------------------+
 Test case 3 (error): cyoa-step1 invalid11.txt
 test1
@@ -218,8 +218,15 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 17 (error): cyoa-step1 invalid25.tx
-Your program successfully indicated a failure case
+Test case 17 (error): cyoa-step1 invalid25.txt
+test1
+test2
+
+What would you like to do?
+
+ 1. You can eat,
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
 Test case 18 (error): cyoa-step1 invalid26.txt
 test1
