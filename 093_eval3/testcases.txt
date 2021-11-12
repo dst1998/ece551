@@ -1,16 +1,6 @@
 #error
 cyoa-step1 invalid.txt
 cyoa-step1 story1/page15.txt
-cyoa-step1 invalid1.txt
-cyoa-step1 invalid2.txt
-cyoa-step1 invalid3.txt
-cyoa-step1 invalid4.txt
-cyoa-step1 invalid5.txt
-cyoa-step1 invalid6.txt
-cyoa-step1 invalid7.txt
-cyoa-step1 invalid8.txt
-cyoa-step1 invalid9.txt
-cyoa-step1 invalid10.txt
 cyoa-step1 invalid11.txt
 cyoa-step1 invalid12.txt
 cyoa-step1 invalid13.txt
@@ -23,6 +13,7 @@ cyoa-step1 invalid19.txt
 cyoa-step1 invalid20.txt
 cyoa-step1 invalid21.txt
 cyoa-step1 invalid22.txt
+cyoa-step1 invalid23.txt
 
 
 #success
