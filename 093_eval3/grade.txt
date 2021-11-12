@@ -1,6 +1,6 @@
-Grading at 11/12/2021:23:05:31.417385
-For commit ID b1a7ffb42b98eb81b1d01f2a8106101ac5aa57b4
-Grading at Fri Nov 12 18:05:00 EST 2021
+Grading at 11/12/2021:23:42:55.898369
+For commit ID fda8feb5a0130fb5504bfb2a5fb29dfa7d21f92f
+Grading at Fri Nov 12 18:42:25 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -252,6 +252,7 @@ test2
 What would you like to do?
 
  1. You can eat.You
+ 2. You cannot eat.
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
