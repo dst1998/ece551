@@ -1,6 +1,6 @@
-Grading at 11/12/2021:23:42:55.898369
-For commit ID fda8feb5a0130fb5504bfb2a5fb29dfa7d21f92f
-Grading at Fri Nov 12 18:42:25 EST 2021
+Grading at 11/12/2021:23:45:36.752454
+For commit ID e9e83ba33341a9bd821548f9cf03310c1203cf7a
+Grading at Fri Nov 12 18:45:06 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -246,8 +246,8 @@ You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
 Test case 19 (error): cyoa-step1 invalid28.txt
-test1
-test2
+test start
+test end
 
 What would you like to do?
 
