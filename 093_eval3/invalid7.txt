@@ -1,5 +1,4 @@
-WIN
+1:   c1
 #
-
 test start
 test end

@@ -7,6 +7,7 @@ cyoa-step1 invalid3.txt
 cyoa-step1 invalid4.txt
 cyoa-step1 invalid5.txt
 cyoa-step1 invalid6.txt
+cyoa-step1 invalid7.txt
 
 #success
 cyoa-step1 story2/page1.txt
