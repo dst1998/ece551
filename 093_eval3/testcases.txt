@@ -18,6 +18,11 @@ cyoa-step1 invalid14.txt
 cyoa-step1 invalid15.txt
 cyoa-step1 invalid16.txt
 cyoa-step1 invalid17.txt
+cyoa-step1 invalid18.txt
+cyoa-step1 invalid19.txt
+cyoa-step1 invalid20.txt
+cyoa-step1 invalid21.txt
+cyoa-step1 invalid22.txt
 
 
 #success
