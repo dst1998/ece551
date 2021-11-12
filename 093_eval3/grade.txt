@@ -1,6 +1,6 @@
-Grading at 11/12/2021:22:14:49.448105
-For commit ID ca61509e9930474b57dd42bd319729e3e4369495
-Grading at Fri Nov 12 17:14:18 EST 2021
+Grading at 11/12/2021:22:23:35.595018
+For commit ID 0dcaf18137d00780584b102fd6a72ccb097139fe
+Grading at Fri Nov 12 17:23:04 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -192,17 +192,45 @@ What would you like to do?
 You listed this in #errors, and we agree that it is an error case.
 However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 20 (success): cyoa-step1 story2/page1.txt
-Your file matched the expected output
+Test case 20 (error): cyoa-step1 invalid18.txt
+test1
+test2
+
+What would you like to do?
+
+ 1. 
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 21 (success): cyoa-step1 story2/page2.txt
-Your file matched the expected output
+Test case 21 (error): cyoa-step1 invalid19.txt
+test1
+test2
+
+What would you like to do?
+
+ 1. 
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 22 (success): cyoa-step1 story2/page3.txt
-Your file matched the expected output
+Test case 22 (error): cyoa-step1 invalid20.txt
+test1
+test2
+
+What would you like to do?
+
+ 1. 
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 +-----------------------------------------------------------------------+
-Test case 23 (success): cyoa-step1 story2/page4.txt
-Your file matched the expected output
+Test case 23 (error): cyoa-step1 invalid21.txt
+test1
+test2
+
+What would you like to do?
+
+ 1. abc a b ab
+You listed this in #errors, and we agree that it is an error case.
+However, your program did not indicate a failure case (exit status was EXIT_SUCCESS)
 
 Grading has taken more than 20 seconds
 Skipping remaining test cases
