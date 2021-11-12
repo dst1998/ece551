@@ -1,4 +1,4 @@
-1.2: c1
+1:: c1
 #haha
 test starts
 testend

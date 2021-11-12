@@ -1,6 +1,5 @@
 WIN
-1:c1
-2:c2
+
 #
 test start
 test end

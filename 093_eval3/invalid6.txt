@@ -1,5 +1,5 @@
-5 .712:c1
-34:c2
+WIN
 #haha
+
 test start
 test end
