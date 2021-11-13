@@ -1,23 +1,22 @@
 #error
-cyoa-step1 invalid.txt
-cyoa-step1 invalid11.txt
-cyoa-step1 invalid12.txt
-cyoa-step1 invalid13.txt
-cyoa-step1 invalid14.txt
-cyoa-step1 invalid15.txt
-cyoa-step1 invalid16.txt
-cyoa-step1 invalid17.txt
-cyoa-step1 invalid18.txt
-cyoa-step1 invalid19.txt
-cyoa-step1 invalid20.txt
-cyoa-step1 invalid21.txt
-cyoa-step1 invalid22.txt
-cyoa-step1 invalid23.txt
-cyoa-step1 invalid24.txt
-cyoa-step1 invalid25.txt
-cyoa-step1 invalid26.txt
-cyoa-step1 invalid27.txt
-cyoa-step1 invalid28.txt
+cyoa-step1 page11.txt
+cyoa-step1 page12.txt
+cyoa-step1 page13.txt
+cyoa-step1 page14.txt
+cyoa-step1 page15.txt
+cyoa-step1 page16.txt
+cyoa-step1 page17.txt
+cyoa-step1 page18.txt
+cyoa-step1 page19.txt
+cyoa-step1 page20.txt
+cyoa-step1 page21.txt
+cyoa-step1 page22.txt
+cyoa-step1 page23.txt
+cyoa-step1 page24.txt
+cyoa-step1 page25.txt
+cyoa-step1 page26.txt
+cyoa-step1 page27.txt
+cyoa-step1 page28.txt
 
 
 #success
