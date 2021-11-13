@@ -77,6 +77,7 @@ void Page::ParsePage() {
     vecText.push_back(vec[i]);
   }
 }
+
 //reformat the choice line
 std::string Page::RewriteChoice(std::string str, size_t i) {
   std::string::size_type pos;  //the position (index) of ":"
@@ -99,37 +100,30 @@ std::string Page::RewriteChoice(std::string str, size_t i) {
   //substr(a,b):index a included, index b not included.
   int index;
   std::stringstream ssnum;
-  /*std::cout
-        << str.substr(0, pos)
-        << std::endl; */ ////////////////////////////////////////////////
   ssnum << str.substr(0, pos);  //put string into sstream
   ssnum >> index;
-  /*std::cout << "index=" << index
-      << std::endl; */ //////////////////////////////////////////////////
-  //if what before ":"change turn into a int, exit.
-  /*if (!ssnum.good()) {
-      ssnum.clear();
-      std::cerr << "Not a valid integer!\n";
-      exit(EXIT_FAILURE);
-      }*/
   std::stringstream ssout;
   ssout << " " << i + 1 << ". " << str.substr(pos + 1);
   return ssout.str();
 }
+
 //print the text of the page.
 void Page::TextPrint() {
   for (size_t i = 0; i < vecText.size(); i++) {
     std::cout << vecText[i] << std::endl;
   }
 }
+
 //print if win
 void Page::WinPrint() {
   std::cout << "Congratulations! You have won. Hooray!\n";
 }
+
 //print if lose
 void Page::LosePrint() {
   std::cout << "Sorry, you have lost. Better luck next time!\n";
 }
+
 //print choices
 void Page::ChoicesPrint() {
   std::cout << "What would you like to do?\n"
@@ -138,6 +132,8 @@ void Page::ChoicesPrint() {
     std::cout << vecChoices[i] << std::endl;
   }
 }
+
+//integrate the functions above, to make test program clear
 void Page::ReadOnePage(const char * filename) {
   ReadIn(filename);
   ParsePage();
