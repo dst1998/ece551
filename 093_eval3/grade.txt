@@ -1,10 +1,10 @@
-Grading at 11/13/2021:00:25:42.674331
-For commit ID e0a64c758b403641432adfdcec30320677d8ba6b
-Grading at Fri Nov 12 19:25:12 EST 2021
+Grading at 11/13/2021:00:33:56.878572
+For commit ID 0564eb6e7e8662c44f42f9fec9491b85ca627157
+Grading at Fri Nov 12 19:33:24 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
-make: 'cyoa-step1' is up to date.
+g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -o cyoa-step1 cyoa-step1.cpp page.hpp page.cpp
 Compiled for step 1
 +-----------------------------------------------------------------------+
 Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
@@ -75,17 +75,17 @@ Your program successfully indicated a failure case
 Test case 7 (error): cyoa-step1 page6.txt
 Our cyoa-step1 does not consider this an error case
 +-----------------------------------------------------------------------+
-Test case 8 (error): cyoa-step1 page7.txt
-Our cyoa-step1 does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case 9 (error): cyoa-step1 page8.txt
-Our cyoa-step1 does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case 10 (error): cyoa-step1 page9.txt
-Our cyoa-step1 does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case 11 (error): cyoa-step1 page10.txt
+Test case 8 (error): cyoa-step1 page10.txt
 Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 9 (success): cyoa-step1 page7.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 10 (success): cyoa-step1 page8.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 11 (success): cyoa-step1 page9.txt
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 12 (success): cyoa-step1 page11.txt
 Your file matched the expected output
@@ -127,12 +127,6 @@ Test case 24 (success): cyoa-step1 page23.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 25 (success): cyoa-step1 page24.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 26 (success): cyoa-step1 page25.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 27 (success): cyoa-step1 page26.txt
 Your file matched the expected output
 
 Grading has taken more than 20 seconds
