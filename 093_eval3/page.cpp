@@ -26,7 +26,7 @@ void Page::ReadIn(const char * filename) {
     vec.push_back(str);
   }
   /*for (size_t i = 0; i < vec.size(); i++) {
-    std::cout << vec[i] << std::endl;
+    std::cout << vec[i] << std::endl;d
     }*/
 }
 
@@ -98,10 +98,11 @@ std::string Page::RewriteChoice(std::string str, size_t i) {
     }
   }
   //substr(a,b):index a included, index b not included.
-  int index;
+  size_t index;
   std::stringstream ssnum;
   ssnum << str.substr(0, pos);  //put string into sstream
   ssnum >> index;
+  vecRefer.push_back(index);  //add pages index being referred by this page into vecRefer.
   std::stringstream ssout;
   ssout << " " << i + 1 << ". " << str.substr(pos + 1);
   return ssout.str();
@@ -150,4 +151,20 @@ void Page::ReadOnePage(const char * filename) {
   else {
     ChoicesPrint();
   }
+}
+//get the value of win(private).
+bool Page::GetWin() {
+  return win;
+}
+//get the value of lose(private).
+bool Page::GetLose() {
+  return lose;
+}
+//get the value of vecRefer(private).
+const std::vector<size_t> Page::GetVecRefer() {
+  return vecRefer;
+}
+//get the value of vecChoices(private).
+const std::vector<std::string> Page::GetVecChoices() {
+  return vecChoices;
 }

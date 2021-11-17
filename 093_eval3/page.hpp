@@ -9,6 +9,7 @@ class Page {
   std::vector<std::string> vec;
   std::vector<std::string> vecText;
   std::vector<std::string> vecChoices;
+  std::vector<size_t> vecRefer;
 
  public:
   Page();
@@ -29,4 +30,14 @@ class Page {
   void ChoicesPrint();
   //integrate the methods to read one page
   void ReadOnePage(const char * filename);
+  //add pages being referred by this page, if exists.
+  void AddRefer(int toAdd);
+  //get the value of win(private).
+  bool GetWin();
+  //get the value of lose(private).
+  bool GetLose();
+  //get the value of vecRefer(private).
+  const std::vector<size_t> GetVecRefer();
+  //get the value of vecChoices(private).
+  const std::vector<std::string> GetVecChoices();
 };
