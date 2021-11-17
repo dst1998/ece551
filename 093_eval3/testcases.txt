@@ -3,5 +3,3 @@ cyoa-step2 ./cyoa/broken1
 cyoa-step2 ./cyoa/broken2
 
 #success
-cyoa-step2 ./story1
-cyoa-step2 ./story2/
