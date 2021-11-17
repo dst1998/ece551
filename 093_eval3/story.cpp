@@ -45,7 +45,8 @@ void Story::CheckOnePage(const char * filename) {
   p.ParsePage();
   for (size_t i = 0; i < p.GetVecRefer().size(); i++) {
     if (p.GetVecRefer()[i] > BeReferencedVec.size()) {
-      std::cerr << filename << "refered at least one page that not exists! " << std::endl;
+      std::cerr << filename << ": This page refered at least one page that not exists! "
+                << std::endl;
       exit(EXIT_FAILURE);
     }
     // if this page referred other pages, FLAG the page index referred to 1.
