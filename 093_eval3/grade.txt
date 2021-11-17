@@ -1,6 +1,6 @@
-Grading at 11/17/2021:19:52:53.617705
-For commit ID cb866d40f864603ae018991997d82c43967459e8
-Grading at Wed Nov 17 14:52:33 EST 2021
+Grading at 11/17/2021:20:00:21.997361
+For commit ID e0a915282d760f7cbd15c488eda537cfba40e5dc
+Grading at Wed Nov 17 15:00:06 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -90,13 +90,8 @@ Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 2 (error): cyoa-step2 ./cyoa/broken2
 Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 3 (success): cyoa-step2 ./story1
-We considered this an error case and gave the following message:
-Cannot read from stdin
-Valgrind reported memory errors
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
