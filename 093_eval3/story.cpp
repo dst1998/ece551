@@ -73,6 +73,7 @@ void Story::CheckOnePage(const char * filename) {
 //check all pages of the story.
 void Story::CheckPages(char * directory) {
   for (size_t i = 1; i <= pageNum; i++) {
+    //create directory+filename
     std::stringstream ss, ssfile;
     ss.str(directory);
     std::string str = ss.str();
@@ -80,6 +81,7 @@ void Story::CheckPages(char * directory) {
     const char * filename = NULL;
     std::string tem = ssfile.str();
     filename = tem.c_str();
+    //check each page
     CheckOnePage(filename);
   }
   //check if every page is referred by other pages, no checking on page1,so i start from 1.
@@ -90,10 +92,12 @@ void Story::CheckPages(char * directory) {
       exit(EXIT_FAILURE);
     }
   }
+  //exit if no win in story.
   if (win < 1) {
     std::cerr << "There should be at least one WIN in story! " << std::endl;
     exit(EXIT_FAILURE);
   }
+  //exit if no lose in story.
   if (lose < 1) {
     std::cerr << "There should be at least one LOSE in story! " << std::endl;
     exit(EXIT_FAILURE);
@@ -119,19 +123,18 @@ void Story::ReadStory() {
     else {
       vecPages[i].ChoicesPrint();
       size_t num;  //page number of a page
+      //get the correct page number of next step
       while (true) {
-        //int cin_error = 0;
-        //size_t num;  //page number of a page
         std::cin >> num;
         //should check if it is a int (by.good()??)
         if (num < 1 || num > vecPages[i].GetVecChoices().size()) {
-          //cin_error = 1;  ///
           std::cout << "That is not a valid choice, please try again\n";
         }
         else {
           break;
         }
       }
+      //jump to the page according to the choices given by audience
       i = vecPages[i].GetVecRefer()[num - 1] - 1;
     }
   }
