@@ -10,6 +10,7 @@ class Story {
   std::vector<Page> vecPages;
 
  public:
+  //default constructor
   Story();
   // get the number of total pages and initialize the BeReferencedVec.
   void GetPageNum(char * directory);
