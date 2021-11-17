@@ -16,7 +16,7 @@ void Story::GetPageNum(char * directory) {
     std::stringstream ss, ssfile;
     ss.str(directory);
     std::string str = ss.str();
-    ssfile << "./" << ss.str() << "/page" << i << ".txt";
+    ssfile << "." << ss.str() << "/page" << i << ".txt";
     //const char * filename = ssfile.str().c_str();
     char * filename = NULL;  //
     std::string tem = ssfile.str();
@@ -65,7 +65,7 @@ void Story::CheckPages(char * directory) {
     std::stringstream ss, ssfile;
     ss.str(directory);
     std::string str = ss.str();
-    ssfile << "./" << ss.str() << "/page" << i << ".txt";
+    ssfile << "." << ss.str() << "/page" << i << ".txt";
     const char * filename = NULL;
     std::string tem = ssfile.str();
     filename = tem.c_str();
