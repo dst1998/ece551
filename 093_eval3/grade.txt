@@ -1,5 +1,5 @@
-Grading at 11/17/2021:19:40:45.724728
-For commit ID 52e3310bc61b96ba591225b3a7cdf94ffc143518
+Grading at 11/17/2021:19:43:41.174946
+For commit ID be52c55cb56c20c4b2ab0f8c086b81dcc1f6cdf6
 hoice, please try again
 < That is not a valid choice, please try again
 < That is not a valid choice, please try again
@@ -22589,16 +22589,11 @@ hoice, please try again
 < That is not a valid choice, please t
 \ No newline at end of file
 Your file did not match the expected output
-
-Compiling cyoa-step1
-make: 'cyoa-step1' is up to date.
 +-----------------------------------------------------------------------+
-Test case 4 (success): cyoa-step1 /story2
+Test case 4 (success): cyoa-step2 /story2
 We considered this an error case and gave the following message:
-Expected file name pageX.txt, but found /story2
-1d0
-< Can't open file: /story2
-Your file did not match the expected output
+Directory /story2 does not exist
+Valgrind reported memory errors
 
 You have FAILED one or more of your test cases
 Keep debugging
