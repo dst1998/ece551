@@ -1,5 +1,7 @@
 #error
-cyoa-step2 ./cyoa/broken1
-cyoa-step2 ./cyoa/broken2
+cyoa-step3 ./cyoa/broken1
+cyoa-step3 ./cyoa/broken2
 
 #success
+cyoa-step3 ./story1
+cyoa-step3 ./story2

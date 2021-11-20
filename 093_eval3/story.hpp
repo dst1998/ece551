@@ -8,6 +8,7 @@ class Story {
   size_t pageNum;
   std::vector<int> BeReferencedVec;
   std::vector<Page> vecPages;
+  std::vector<int> vecDepth;
 
  public:
   //default constructor
@@ -20,4 +21,8 @@ class Story {
   void CheckPages(char * directory);
   //read whole story after checking.
   void ReadStory();
+  //get the depth of each page.
+  void GetDepth();
+  //depth helper function, used in GetDepth.
+  void DepthHelper(size_t index, int depth);
 };

@@ -139,3 +139,30 @@ void Story::ReadStory() {
     }
   }
 }
+
+void Story::GetDepth() {
+  //initialize every page's depth to 0
+  for (size_t i = 0; i < pageNum; i++) {
+    vecDepth.push_back(0);
+  }
+  Story::DepthHelper(0, 0);
+  for (size_t i = 0; i < pageNum; i++) {
+    if (vecDepth[i] == 0 && i > 0) {
+      std::cout << "Page " << i + 1 << " is not reachable" << std::endl;
+    }
+    else {
+      std::cout << "Page " << i + 1 << ":" << vecDepth[i] << std::endl;
+    }
+  }
+}
+
+void Story::DepthHelper(size_t index, int depth) {
+  if (vecPages[index].GetVecRefer().size() == 0) {
+    vecDepth[index] = depth;
+    return;
+  }
+  for (size_t i = 0; i < vecPages[index].GetVecRefer().size(); i++) {
+    DepthHelper(vecPages[index].GetVecRefer()[i] - 1, depth + 1);
+    vecDepth[index] = depth;
+  }
+}
