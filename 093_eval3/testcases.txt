@@ -6,4 +6,5 @@ cyoa-step3 ./cyoa/broken2
 cyoa-step3 ./story1
 cyoa-step3 ./story2
 cyoa-step4 ./cyoa/cycle
+cyoa-step4 ./cyoa/no_win
 cyoa-step4 ./story1
