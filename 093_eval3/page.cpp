@@ -15,25 +15,72 @@ Page::~Page() {
 }
 //Read input file into a vector
 void Page::ReadIn(const char * filename) {
+  //check if filename is valid ("page"+int+".txt")
+  const char * p = filename;
+  if (*p++ != 'p') {
+    std::cerr << "Invalid filename! no p" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  if (*p++ != 'a') {
+    std::cerr << "Invalid filename! no a" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  if (*p++ != 'g') {
+    std::cerr << "Invalid filename! no g" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  if (*p++ != 'e') {
+    std::cerr << "Invalid filename! no e" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  //the first char after 'e' should be 1-9
+  if (*p < '1' || *p > '9') {
+    std::cerr << "Invalid filename! no 1-9" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  p++;
+  while (*p != '\0') {
+    if (*p >= '0' && *p <= '9') {
+      p++;
+    }
+    else {
+      break;
+    }
+  }
+  if (*p++ != '.') {
+    std::cerr << "Invalid filename! no ." << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  if (*p++ != 't') {
+    std::cerr << "Invalid filename! no t" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  if (*p++ != 'x') {
+    std::cerr << "Invalid filename! no x" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  if (*p++ != 't') {
+    std::cerr << "Invalid filename! no t" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  //check if file is valid
   std::ifstream infile(filename);
   if (infile.fail()) {
     std::cerr << "Can't open file: " << filename << std::endl;
     exit(EXIT_FAILURE);
   }
+  //get the content into vec is chechking is successfully done above
   std::string str;
   while (!infile.eof()) {
     std::getline(infile, str);
     vec.push_back(str);
   }
-  /*for (size_t i = 0; i < vec.size(); i++) {
-    std::cout << vec[i] << std::endl;d
-    }*/
 }
 
 //Parsing the text before and behind '#'
 void Page::ParsePage() {
   size_t TextStartNum = 0;  //the row index that text starts.
-                            //get Textstartnum
+  //get Textstartnum
   for (size_t i = 0; i < vec.size(); i++) {
     if (vec[i][0] == '#') {
       break;

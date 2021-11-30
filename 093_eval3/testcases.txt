@@ -1,6 +1,12 @@
 #error
 cyoa-step3 ./cyoa/broken1
 cyoa-step3 ./cyoa/broken2
+cyoa-step1 page0.txt
+cyoa-step1 page1.txt
+cyoa-step1 page3.txt
+cyoa-step1 page4.txt
+cyoa-step1 page5.txt
+cyoa-step1 Page1.txt
 
 #success
 cyoa-step3 ./story1
@@ -8,3 +14,4 @@ cyoa-step3 ./story2
 cyoa-step4 ./cyoa/cycle
 cyoa-step4 ./cyoa/no_win
 cyoa-step4 ./story1
+cyoa-step1 page10.txt

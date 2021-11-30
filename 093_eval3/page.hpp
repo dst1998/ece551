@@ -6,10 +6,10 @@ class Page {
   size_t choiceNum;
   bool win;
   bool lose;
-  std::vector<std::string> vec;
-  std::vector<std::string> vecText;
-  std::vector<std::string> vecChoices;
-  std::vector<size_t> vecRefer;
+  std::vector<std::string> vec;         //all lines from a page
+  std::vector<std::string> vecText;     //text part of a page
+  std::vector<std::string> vecChoices;  //choices lines of a page
+  std::vector<size_t> vecRefer;         // page number of what are referred by this page
 
  public:
   Page();
