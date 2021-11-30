@@ -1,6 +1,6 @@
-Grading at 11/30/2021:04:56:54.230348
-For commit ID 2b935f0b4710a5cee7ccc90eaccda34be3b43995
-Grading at Mon Nov 29 23:56:24 EST 2021
+Grading at 11/30/2021:05:25:08.530549
+For commit ID 150e234cb2ffc7c2b212189186f6ee0e7c5aa7f1
+Grading at Tue Nov 30 00:24:37 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -115,7 +115,10 @@ make: 'cyoa-step4' is up to date.
 Test case 5 (success): cyoa-step4 ./cyoa/cycle
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 6 (success): cyoa-step4 ./story1
+Test case 6 (success): cyoa-step4 ./cyoa/no_win
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 7 (success): cyoa-step4 ./story1
 Your file matched the expected output
 
 You have PASSED all of your test cases
