@@ -15,9 +15,18 @@ Page::~Page() {
 }
 //Read input file into a vector
 void Page::ReadIn(const char * filename) {
-  //check if filename is valid ("page"+int+".txt")
+  //check if filename is valid (directory+"page"+int+".txt")
   const char * p = filename;
-  if (*p++ != 'p') {
+  while (*p != '\0') {
+    if (*p != 'p') {
+      p++;
+    }
+    else {
+      p++;
+      break;
+    }
+  }
+  if (*p == '\0') {
     std::cerr << "Invalid filename! no p" << std::endl;
     exit(EXIT_FAILURE);
   }
