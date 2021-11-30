@@ -1,6 +1,7 @@
 
 #include "story.hpp"
 
+#include <algorithm>
 #include <cstdio>
 #include <cstdlib>
 #include <fstream>
@@ -12,12 +13,11 @@ Story::Story() : win(0), lose(0), pageNum(0) {
 }
 // get the number of total pages and initialize the BeReferencedVec.
 void Story::GetPageNum(char * directory) {
-  int i = 1;
+  int i = 1;  //i:page number
   while (true) {
     //create directory+filename
     std::stringstream ss, ssfile;
-    ss.str(directory);
-    std::string str = ss.str();
+    ss.str(directory);  //std::string
     ssfile << ss.str() << "/page" << i << ".txt";
     char * filename = NULL;
     std::string tem = ssfile.str();
@@ -75,8 +75,7 @@ void Story::CheckPages(char * directory) {
   for (size_t i = 1; i <= pageNum; i++) {
     //create directory+filename
     std::stringstream ss, ssfile;
-    ss.str(directory);
-    std::string str = ss.str();
+    ss.str(directory);  //std::string
     ssfile << ss.str() << "/page" << i << ".txt";
     const char * filename = NULL;
     std::string tem = ssfile.str();
@@ -157,12 +156,67 @@ void Story::GetDepth() {
 }
 
 void Story::DepthHelper(size_t index, int depth) {
+  // if this page is a leaf node, we can know its depth.
   if (vecPages[index].GetVecRefer().size() == 0) {
-    vecDepth[index] = depth;
+    if (vecDepth[index] == 0 || vecDepth[index] > depth) {
+      vecDepth[index] = depth;
+    }
     return;
   }
+  //else: recursion, get the depth when return.
   for (size_t i = 0; i < vecPages[index].GetVecRefer().size(); i++) {
     DepthHelper(vecPages[index].GetVecRefer()[i] - 1, depth + 1);
+  }
+  if (vecDepth[index] == 0 || vecDepth[index] > depth) {
     vecDepth[index] = depth;
+  }
+}
+
+void Story::GetPath() {
+  Story::GetPathHelper(0);
+  //print
+  if (vecAllPaths.size() == 0) {
+    std::cout << "This story is unwinnable!" << std::endl;
+  }
+  else {
+    for (size_t i = 0; i < vecAllPaths.size(); i++) {
+      for (size_t j = 0; j < vecAllPaths[i].size(); j++) {
+        std::cout << vecAllPaths[i][j];
+      }
+      std::cout << std::endl;
+    }
+  }
+}
+
+void Story::GetPathHelper(size_t index) {
+  // if this page is a leaf node.
+  if (vecPages[index].GetVecRefer().size() == 0) {
+    if (vecPages[index].GetWin()) {
+      std::stringstream ss;
+      ss << index + 1 << "(win)";
+      vecPath.push_back(ss.str());
+      vecAllPaths.push_back(vecPath);
+      vecPath.erase(vecPath.begin() + vecPath.size() - 1);
+      return;
+    }
+    else {
+      return;
+    }
+  }
+  //else: recursion, get the depth when return.
+  std::stringstream ss;
+  for (size_t i = 0; i < vecPages[index].GetVecRefer().size(); i++) {
+    if (std::find(vecVisit.begin(), vecVisit.end(), vecPages[index].GetVecRefer()[i]) !=
+        vecVisit.end()) {
+      continue;
+    }  //This returns a bool (true if present, false otherwise).
+    std::stringstream ss;
+    ss << index + 1 << "(" << i + 1 << "),";
+    vecPath.push_back(ss.str());
+    vecVisit.push_back(vecPages[index].GetVecRefer()[i]);
+    GetPathHelper(vecPages[index].GetVecRefer()[i] - 1);
+
+    vecPath.erase(vecPath.begin() + vecPath.size() - 1);
+    vecVisit.erase(vecVisit.begin() + vecVisit.size() - 1);
   }
 }

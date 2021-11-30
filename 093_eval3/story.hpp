@@ -9,6 +9,9 @@ class Story {
   std::vector<int> BeReferencedVec;
   std::vector<Page> vecPages;
   std::vector<int> vecDepth;
+  std::vector<std::string> vecPath;
+  std::vector<std::vector<std::string> > vecAllPaths;
+  std::vector<size_t> vecVisit;
 
  public:
   //default constructor
@@ -25,4 +28,7 @@ class Story {
   void GetDepth();
   //depth helper function, used in GetDepth.
   void DepthHelper(size_t index, int depth);
+  //get all the non-cycle paths of the story.
+  void GetPath();
+  void GetPathHelper(size_t index);
 };

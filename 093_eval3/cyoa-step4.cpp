@@ -1,0 +1,16 @@
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+
+#include "story.hpp"
+int main(int argc, char ** argv) {
+  if (argc != 2) {
+    std::cerr << "Wrong number of argument!" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  Story mystory;
+  mystory.GetPageNum(argv[1]);
+  mystory.CheckPages(argv[1]);
+  mystory.GetPath();
+  return EXIT_SUCCESS;
+}
