@@ -124,29 +124,15 @@ void Story::ReadStory() {
       size_t num;  //page number of a page
       //get the correct page number of next step
       while (true) {
-        int flag = 1;  //flag: whether cin can transform into an int
-        std::string str;
-        std::cin >> str;
-        char * c = (char *)str.c_str();  //
-        for (size_t j = 0; j < str.length(); ++j) {
-          while (str[j] == ' ') {
-            continue;
-          }
-          if (str[j] < '0' || str[j] > '9') {
-            std::cout << "That is not a valid choice, please try again\n";
-            flag = 0;
-            break;
-          }
-          else {
-            break;
-          }
-        }
-        //
-        if (flag == 0) {
-          continue;
+        std::cin >> num;
+        if (!std::cin.good()) {
+          std::cin.clear();
+          std::string badinput;
+          std::cin >> badinput;
+          std::cout << "That is not a valid choice, please try again\n";
         }
         else {
-          num = atoi(c);
+          //num = atoi(c);
           //std::cout << "num=" << num << std::endl;  //
           //check if it is a int or a valid int for choices
           if (num < 1 || num > vecPages[i].GetVecChoices().size()) {

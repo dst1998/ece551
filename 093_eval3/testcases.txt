@@ -7,7 +7,6 @@ cyoa-step1 page3.txt
 cyoa-step1 page4.txt
 cyoa-step1 page5.txt
 cyoa-step1 Page1.txt
-cyoa-step2 ./story1 < input2.txt
 
 #success
 cyoa-step3 ./story1
@@ -17,3 +16,4 @@ cyoa-step4 ./cyoa/no_win
 cyoa-step4 ./story1
 cyoa-step1 page10.txt
 cyoa-step2 ./story1 < input1.txt
+cyoa-step2 ./story1 < input2.txt
