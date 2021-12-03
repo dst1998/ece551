@@ -1,6 +1,6 @@
-Grading at 12/03/2021:19:44:05.045734
-For commit ID 644f664d6f3210e91bf1c9da1588b47b42539e7b
-Grading at Fri Dec  3 14:43:25 EST 2021
+Grading at 12/03/2021:20:32:21.641160
+For commit ID f21e0a80b7dc4c205a4606013968041b39e79702
+Grading at Fri Dec  3 15:31:43 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -74,7 +74,7 @@ Your file matched the expected output
 Step 2: PASSED Pre-Grader Test Cases
 
 Compiling cyoa-step3
-g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -o cyoa-step3 cyoa-step3.cpp story.hpp story.cpp page.hpp page.cpp
+make: 'cyoa-step3' is up to date.
 +-----------------------------------------------------------------------+
 Test case 15 (success): cyoa-step3 /usr/local/ece551/cyoa/story1
 Your file matched the expected output
@@ -124,48 +124,43 @@ Your program successfully indicated a failure case
 Test case 8 (error): cyoa-step1 Page1.txt
 Your program successfully indicated a failure case
 
-Compiling cyoa-step2
-make: 'cyoa-step2' is up to date.
-+-----------------------------------------------------------------------+
-Test case 9 (error): cyoa-step2 ./story1 < input2.txt
-Our cyoa-step2 does not consider this an error case
-
 Compiling cyoa-step3
 make: 'cyoa-step3' is up to date.
 +-----------------------------------------------------------------------+
-Test case 10 (success): cyoa-step3 ./story1
+Test case 9 (success): cyoa-step3 ./story1
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 11 (success): cyoa-step3 ./story2
+Test case 10 (success): cyoa-step3 ./story2
 Your file matched the expected output
 
 Compiling cyoa-step4
 make: 'cyoa-step4' is up to date.
 +-----------------------------------------------------------------------+
-Test case 12 (success): cyoa-step4 ./cyoa/cycle
+Test case 11 (success): cyoa-step4 ./cyoa/cycle
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): cyoa-step4 ./cyoa/no_win
+Test case 12 (success): cyoa-step4 ./cyoa/no_win
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 14 (success): cyoa-step4 ./story1
+Test case 13 (success): cyoa-step4 ./story1
 Your file matched the expected output
 
 Compiling cyoa-step1
 make: 'cyoa-step1' is up to date.
 +-----------------------------------------------------------------------+
-Test case 15 (success): cyoa-step1 page10.txt
+Test case 14 (success): cyoa-step1 page10.txt
 Your file matched the expected output
 
 Compiling cyoa-step2
 make: 'cyoa-step2' is up to date.
 +-----------------------------------------------------------------------+
-Test case 16 (success): cyoa-step2 ./story1 < input1.txt
-70a71
-> That is not a valid choice, please try again
-Your file did not match the expected output
+Test case 15 (success): cyoa-step2 ./story1 < input1.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 16 (success): cyoa-step2 ./story1 < input2.txt
+Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
