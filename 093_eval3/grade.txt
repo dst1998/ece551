@@ -1,6 +1,6 @@
-Grading at 12/03/2021:20:32:21.641160
-For commit ID f21e0a80b7dc4c205a4606013968041b39e79702
-Grading at Fri Dec  3 15:31:43 EST 2021
+Grading at 12/04/2021:00:51:15.286392
+For commit ID 2e04c0e0aafca97c75d673ade54bd325b6f9f689
+Grading at Fri Dec  3 19:50:29 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -121,43 +121,70 @@ Your program successfully indicated a failure case
 Test case 7 (error): cyoa-step1 page5.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 8 (error): cyoa-step1 Page1.txt
+Test case 8 (error): cyoa-step1 Page2.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 9 (error): cyoa-step1 Page6.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 10 (error): cyoa-step1 Page7.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 11 (error): cyoa-step1 Page8.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 12 (error): cyoa-step1 Page9.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 13 (error): cyoa-step1 Page11.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 14 (error): cyoa-step1 Page13.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 15 (error): cyoa-step1 Page14.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 16 (error): cyoa-step1 Page15.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 17 (error): cyoa-step1 Page16.txt
 Your program successfully indicated a failure case
 
 Compiling cyoa-step3
 make: 'cyoa-step3' is up to date.
 +-----------------------------------------------------------------------+
-Test case 9 (success): cyoa-step3 ./story1
+Test case 18 (success): cyoa-step3 ./story1
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 10 (success): cyoa-step3 ./story2
+Test case 19 (success): cyoa-step3 ./story2
 Your file matched the expected output
 
 Compiling cyoa-step4
 make: 'cyoa-step4' is up to date.
 +-----------------------------------------------------------------------+
-Test case 11 (success): cyoa-step4 ./cyoa/cycle
+Test case 20 (success): cyoa-step4 ./cyoa/cycle
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 12 (success): cyoa-step4 ./cyoa/no_win
+Test case 21 (success): cyoa-step4 ./cyoa/no_win
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): cyoa-step4 ./story1
+Test case 22 (success): cyoa-step4 ./story1
 Your file matched the expected output
 
 Compiling cyoa-step1
 make: 'cyoa-step1' is up to date.
 +-----------------------------------------------------------------------+
-Test case 14 (success): cyoa-step1 page10.txt
+Test case 23 (success): cyoa-step1 page10.txt
 Your file matched the expected output
 
 Compiling cyoa-step2
 make: 'cyoa-step2' is up to date.
 +-----------------------------------------------------------------------+
-Test case 15 (success): cyoa-step2 ./story1 < input1.txt
+Test case 24 (success): cyoa-step2 ./story1 < input1.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 16 (success): cyoa-step2 ./story1 < input2.txt
+Test case 25 (success): cyoa-step2 ./story1 < input2.txt
 Your file matched the expected output
 
 You have PASSED all of your test cases
