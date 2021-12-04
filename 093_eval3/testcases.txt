@@ -1,6 +1,4 @@
 #error
-cyoa-step3 ./cyoa/broken1
-cyoa-step3 ./cyoa/broken2
 cyoa-step1 page0.txt
 cyoa-step1 page1.txt
 cyoa-step1 page3.txt
@@ -11,13 +9,19 @@ cyoa-step1 Page6.txt
 cyoa-step1 Page7.txt
 cyoa-step1 Page8.txt
 cyoa-step1 Page9.txt
-cyoa-step1 Page11.txt
-cyoa-step1 Page13.txt
-cyoa-step1 Page14.txt
-cyoa-step1 Page15.txt
-cyoa-step1 Page16.txt
-
-
+cyoa-step1 Page10.txt
+cyoa-step1 Page17.txt
+cyoa-step1 Page18.txt
+cyoa-step1 Page19.txt
+cyoa-step1 Page20.txt
+cyoa-step1 Page21.txt
+cyoa-step1 Page22.txt
+cyoa-step1 Page23.txt
+cyoa-step1 Page24.txt
+cyoa-step1 Page25.txt
+cyoa-step1 Page26.txt
+cyoa-step1 Page27.txt
+cyoa-step1 Page28.txt
 
 #success
 cyoa-step3 ./story1
