@@ -6,7 +6,18 @@ cyoa-step1 page1.txt
 cyoa-step1 page3.txt
 cyoa-step1 page4.txt
 cyoa-step1 page5.txt
-cyoa-step1 Page1.txt
+cyoa-step1 Page2.txt
+cyoa-step1 Page6.txt
+cyoa-step1 Page7.txt
+cyoa-step1 Page8.txt
+cyoa-step1 Page9.txt
+cyoa-step1 Page11.txt
+cyoa-step1 Page13.txt
+cyoa-step1 Page14.txt
+cyoa-step1 Page15.txt
+cyoa-step1 Page16.txt
+
+
 
 #success
 cyoa-step3 ./story1
